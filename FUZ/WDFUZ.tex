@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\title{Wstęp do Fizyki Układów Złożonych}
+\begin{document}
+	\maketitle
+	\newpage
+	\pagenumbering{arabic}
+	\section{Wykład 1}
+		\subsection{Zasady zaliczenia}
+		2 kolokwia po 10 pkt, trzeba przepołowić.
+		\subsection{Aktualna tematyka Fizyki Układów Złożonych}
+		\begin{itemize}
+			\item zjawiska dynamiczne w sieciach złożonych
+			\item zastosowania fizyki statystycznej do badania układów złożonych
+			\item automaty komórkowe
+			\item sztuczne sieci neuronowe
+		\end{itemize}
+		\subsection{Układy złożone - definicja}
+		Są to układy złożone z dużej liczby elementów, które oddziaływują ze sobą. Są to układy zawsze o dynamice nieliniowej, pomimo tego obowiązują w niej uniwersalne prawa (np. prawa skalowania). Jeżeli chcemy to opisać, używamy obliczeń numerycznych i metod symulacji komputerowych - no bo to są układy nieliniowe! Przykłady: układy biologiczne, społeczeństwa mrówek, granulaty, sieci hydrologiczne, systemy ekonomiczne, internet, automaty komórkowe, układy charakteryzujące się pattern formation. 
+		
+		\subsection{Przykłady Układów Złożonych:}
+		\begin{itemize}
+			\item sieć neuronowa człowieka (mózg człowieka, $10^11$ neuronów, wiele połączeń pomiędzy nimi)
+			\item społeczność ludzka (jednostki podzielone na grupy, połączenia interpersonalne, różne stopnie hierarchii), kształtowanie opinii, rozwój epidemii,  
+			\item kwestie ekonomiczne i finansowe
+			\item ziarna (piasek) \item lawiny ziemne albo śnieżne \item samoorganizująca się krytyczność
+			\item biologia \item sztuczne życie
+		\end{itemize}
+	
+		\subsection{Wybrane problemy Fizyki Układów Złożonych}
+		\begin{itemize}
+			\item Układy złożone w przyrodzie i metody ich badania
+			\item Automaty komórkowe
+			\item Sztuczne życie
+			\item Samoorganizująca się krytyczność
+			\item Inteligencja rozproszona
+			\item Sztuczne układy społeczne
+			\item Modelowanie wybranych zjawisk zachodzących w rzeczywistych ukłąach społecznych
+			\item Zjawisko formatowania wzorców
+			\item Sztuczne sieci neuronowe
+			\item Szkła spinowe
+			\item Podsumowanie wszystkich zjawisk i perspektywy rozwoju
+		\end{itemize}
+	
+		\subsection{Przykłady użycia i zastosowania Fizyki Układów Złożonych}	
+		\begin{itemize}
+			\item Przykład neuronu.
+			\item Przykład sieci internetowej.
+			\item Przykład interakcji białek w drożdżach.
+			\item Epidemie - ospa, hiszpanka, AIDS, SARS, ataki bronią biologiczną - teraz tworzy się modele opisujące te epidemie.
+			\item Szczepionki mają duży wpływ na ograniczenie stopnia epidemii, jest jakiś śmieszny bezpieczny próg szczepień, dla niego następuje samotłumienie dla epidemii.
+			\item Automaty komórkowe
+			\item Pattern formation - powtarzanie się struktur, przykładowo liście lub naczynia krwionośne w płucach
+			\item Satelity obserwują oceany, gdzie występuje zaburzenie pattern formation (powtarzalne fale), wtedy zostaje wychwycony np. statek albo jakiś kosmita.
+			\item Przykład: badania płuc przesiewowe
+			\item Przykład: zabarwienie muszli ślimaka, superpozycja dwóch pigmentów i silnych przesunięć fazowych pomiędzy nimi
+		\end{itemize}
+	\section{Wykład 2}
+		Damian mi wyśle notatki.
+	\section{Wykład 3}
+		\paragraph{Właściwości lokalne CA} 
+		\subparagraph{Najprostsza charakterystyka statystyczna CA} oznaczenia: binarna reprezentacja s liczby dziesiętnej \\
+		Funkcja $\#_d(s) = \#_\alpha(n)$ - jest to liczba wystąpień cyfry $\alpha$ w binarnej reprezentacji s liczby n\\
+		Przykład: $\#_1(182)=\#_1(10110110)=5$ \\
+		$\#_0(182) = 3$\\
+		średnia liczba 1 w automacie o dwóch wartościach {0,1} = $\rho_\tau$ po czasie ewolucji $t=\tau$ ($\rho_0$ - konfiguracja początkowa)\\
+		ogólnie dla n z daszkiem jest $\#_1(n) + \#_0(n) = [log_2 n]$ - całkowita liczba cyfr w reprezentacji liczby binarnej\\
+		... niedokończone
+		 \paragraph{Problem} W chwili $t_0$ jest $\rho_t=\rho_0 \leftarrow$ gęstość jedynek \\
+		 Jaka będzie dla danej reguły gęstość po czasie $t=\tau:\rho(t=\tau)$?\\
+		 \paragraph{Odpowiedź} Dla dowolnej reguły jest to problem trudny, dla niektórych reguł jest trywialny, np. reguła 0 $\rightarrow \rho_2 = 0$ , regułą 254 $\rho_\infty=0$ itd. , to nie jest tak istotne
+		 \paragraph{Prawidłowe wyniki dla reguły 90}
+		 Zakładamy konfiguracje początkową : 0000000000100000000 \\
+		 wprowadzamy oznaczenia ogólne: $N_\tau^{(1)} = 2^{\#_1(\tau)}$ - liczba jedynek w danym automacie po $t=\tau$\\
+		 Można udowodnić że:\\
+		 $\rho_\tau = \frac{1}{2}[1]$ ...\
+		 \paragraph{Gęstość trójkątów}
+		 w wielu regułach czesto pojawiają się trójkąty \\
+		 $T_{(i)}(n)$ - Średnia gęstość trójkątów na podstawie n, wypełnienie cyfrą i\\
+		 np. $T_(1) (5) = 1$\\
+		 $T_(0) (5) = 2$ \\
+		 $T_(1) (7) = 1$ \\
+		 Jest wiele obliczeń analitycznych dla początkowych reguł np. dla reguł 150 otrzymano $T_(1) (n) = n^{-log_2(2\phi)}=n^1,69$ gdzie $\phi = \frac{1}{2}(1+\sqrt{5})$
+		 \paragraph{Gęstość sekwencji}
+		 n jednakowych cyfr (i) ograniczonych cyframi innymi (np. dla i=1 są to zera) - $Q_{(i)} (n)$ \\
+		 $Q_{(i)}(n) = \Sigma[\frac{2T_(i)(j)}{j}]$ 
+		 \subsubsection{Automaty komórkowe probabilistyczne}
+			 Reguły lokalne dynamiki uwzględniają szum. Formalnie odpowiada to wprowadzeniu temperatury. \\ 
+		\subsection{Sztuczna inteligencja}
+			Bakteria - twór którego funkcjonowanie opiera się na złożonych reakcjach biochemicznych \\
+			Komputer - analogia do istot żywych, ale to nie jest ciągle życie \\
+			\textbf{Istota żywa} wg Arystotelesa to układ posiadający zdolność do reprodukcji, układ pobiera informacje z otoczenia i komunikuje się z nim\\
+			Układ żyjący charakteryzuje się wzrostem organizmu na wskutek metabolizmu, reprodukcja, modyfikacja na skutek działania z otoczeniem \\
+			Schroedinger - życie nie jest czymś co można wyjaśniać tylko na podstawie badań fizycznych, potrzebne jest coś ekstra \\
+			Każdy byt jest niezależną monadą która ma własny rytm i mechanizm życia - Leibniz
+			\paragraph{Początki} W Los Alamos była pierwsza konferencja na temat SI w 1987 - workshop of artificial life. 
+			\textbf{Chrostopher Langton} - założyciel. 
+			Wnioski - nie jest możliwe stworzenie prawdziwego życia, możemy tworzyć obiektu posiadające cechy obiektów żywych. Możemy otrzymać zjawiska dla obiektów żyjących: ewolucja, rozmnażanie, rozpad, współzawodnictwo. Istnieje możliwość stworzenia rzeczywistych układów żyjących, udało już się stworzyć sztuczną bakterię, sklejenie jej z elementów innych bakterii.\\
+			\paragraph{Artificial Life:}
+			\begin{itemize}
+				\item badania biologiczne
+				\begin{itemize}
+					\item badania biologiczne
+					\item pochodzenie życia
+					\item badanie ewolucji
+					\item synteza DNA/RNA
+				\end{itemize}
+				\item prawa inteligentnego zachowania
+				\begin{itemize}
+					\item samoorganizacja
+					\item zachowania grupowe
+					\item roboty autonomiczne
+					\item inteligencja rozproszona
+				\end{itemize}
+			
+				\item zastosowania praktyczne
+				\begin{itemize}
+					\item wykorzystanie komputerów do układów sztucznego życia
+					\item wykorzystanie do gier
+					\item optymalizacja
+				\end{itemize}
+			\end{itemize} 
+			
+			\paragraph{Pętla Langtona} Źródło, jakieś czasopismo fizyczne w 1984 roku, został przedstawiony automat który potrafi się reprodukować, może być odzwierciedleniem żyjących organizmów. Układ składający się ze zbioru reguł które się poruszają i się reprodukują. Pętla wypuszcza wypustkę i z niej powstaje nowa pętla. Po jakimś czasie powstaje cała kolonia, w środku są pętle bez wypustek - obumarłe.
+			\paragraph{Sąsiedztwo} Mamy dwa rodzaje sąsiedztwa: \textbf{Moore'a} (8 komórek na około) i \textbf{von Newmanna} (4 komórki bez kątów)
+		\section{Wykład 4}
+			\paragraph{Pętla Langtona - ciąg dalszy} Gen śmierci anihiluje komórki które nie mogą się rozmnażać. Jest to układ który się rozrasta i potem się rozmnaża. Potrzebuje on przestrzeni życiowej. Jeżeli w swoim rozwoju napotka na przeszkodę, nie może się dalej rozwijać. Osobniki mniejsze są bardziej przystosowane do przeżycia. 
+			\paragraph{Game of Life (GoL)} Conway (1970) jest jej pomysłodawcą. Automat komórkowy który jst intensywnie badany, jest to automat gdyż posiada on ścisłym regułom. Sąsiedztwo wyznacza ewolucje stanu komórki. Przykład automatu totalistycznego - stan komórki zależy od sumy stanu komórek sąsiednich. Można zauważyć wiele cech sztucznego życia. Czy to są układy deterministyczne? Są to na pewno procesy nieodwracalne. 
+			\paragraph{Reguły GoL}
+			\begin{itemize}
+				\item stany 0 i 1 (dead/alive)
+				\item jeżeli żyjąca komórka ma mniej niż dwóch sąsiadów żyjących umiera z \textbf{samotności}
+				\item jeżeli komórka ma więcej niż 3 sąsiadów żyjących umiera z \textbf{tłoku}
+				\item jeżeli ma dokładnie 3 sąsiadów żywych to wtedy \textbf{ożywa}
+				\item w pozostałych przypadkach zostaje bez zmian.
+			\end{itemize}
+			\paragraph{Typy różnych bloków w GoL}
+			\begin{itemize}
+				\item \textbf{Typ I} - wciąż żyjące, nie zmieniają się, są stałe (block, tub, snake, integral)
+				\item \textbf{Typ II} - oscylatory 
+				\item \textbf{Typ III} - statki kosmiczne, wzór który po n krokach przesuwa się w jakąś stronę
+				\item \textbf{Typ IV} - wzory które ciągle zwiększają swój rozmiar
+				\begin{itemize}
+					\item \textbf{Typ a} - guns - co jakiś czas produkują nowy element
+				\end{itemize} 
+			\end{itemize}
+		 
+		 Oddziaływania lokalne z najbliższymi sąsiadami odgrywają fundamentalną rolę w automatach komórkowych.
+		\paragraph{Jakie cechy życia są widoczne w GoL?} 
+		 \begin{itemize}
+		 	\item niszczący wpływ środowiska
+		 	\item ewolucja
+		 	\item śmierć
+		 	\item ruch
+		 	\item rozmnażanie
+		 \end{itemize}
+	\section{Wykład 5}
+		\paragraph{}Karl Sims - Virtual Creature. Tworzenie przy pomocy symulacji komputerowych trójwymiarowych sztuczne organizmy współzawodniczące pomiędzy sobą w różnych dziedzinach - skakanie, bieganie, itp. 
+		Można generować takie stworzenia dowolnie, czasem przybierają podobne formy do zwierząt, składają się one z prostopadłościanów złożonych ze sobą, są pewne ograniczenia tak jak w stawach, wykazują cechy prawdziwych zwierząt, są też nowe formy. 
+		
+		\subparagraph{XIX wiek} Kreacjonizm - życie powstało z woli Boga, autogonia - powstanie spontaniczne organizmów z materii. Lata dwudzieste - Oparin - w pierwotnych warunkach na ziemi istniało morze, wielkie zbiorniki wodne, w tych zbiornikach były związki chemiczne, $CO_2$, amoniak, formaldehyd, występowały silne i częste wyładowania elektryczne, i wtedy powstały oddzielne pęcherzyki, które miały złożony skład chemiczny, i one były zdolne do wzrostu i podziału - pierwociny komórki. 
+		\subparagraph{Teraz} Badanie życia, w najprostszych organizmach eliminuje się kolejne geny i sprawdza się czy komórka dalej się rozmnaża. Ten ziomeczek uważa żę jest możliwe że stworzymy nowe organizmy. R. Breslow, Columbia University, rozważa możliwość że życie pochodzi z kosmosu. Te śmieszne meteoryty przyniosły związki organiczne - aminokwasy które stanowiły początek organizmów żywych na ziemi. Ale: wszystkie stworzenia na ziemi składają się z aminokwasów lewoskrętnych a jak się dołoży prawoskrętne to wtedy następuje rozkład. To jest pewien dowód na to że to lewoskrętne aminokwasy dotarły na ziemię. Tak asteroida w czasie podróży w kosmosie trafiła w sąsiedztwo gwiazd neutronowych, duże pole magnetyczne, aminokwasy prawoskrętne zostały zniszczone, zostały tylko lewoskrętne. 
+		\paragraph{Zupa ze złożonych związków chemicznych} Mamy roztwór w którym powstają twory skłądające się z głowy i z ogona. Na początku mamy pojedyncze molekuły, żeby powstało cos złożonego, np. jakieś micele.
+		\subparagraph{}L. Edwards, Y. Peng, AL, \underline{6}, 35-72(1998)	Symulacja wielu cząsteczek w roztworze wodnym.
+		\paragraph{} Siły: 
+		\begin{itemize}
+				\item $f_1$ - przyciagająca, head-head attraction 
+				\item $f_5$ - tail-tail attraction 
+				\item $f_3, f_4$ - head-tail, tail-head repulsion 
+				\item $f_2$ - repulsion
+				\item $f_6, f_7$ - sztywność molekuł 
+		\end{itemize}
+		Moment sił:
+		$$T_i(t)=\Sigma_{i\neq j}[\Sigma \tau_K(t)]+rand_2(t)-c_2u_2(t)$$
+ 		$$r=\frac{1}{6}l$$
+ 		$$m=1$$
+		 Środowisko składało się z 900 komórek, w każdej z nich mogła być cząsteczka, r=5, l=30, w tym środowisku umieszczono przypadkowo 200 cząstek, uruchomiono symulację.
+		 \paragraph{Próby stworzenia prawdziwego życia} Jest kilkaset zespołów które starają się stworzyć sztuczne życie. W NY stworzono sztuczny wirus choroby polio, ten sztuczny wirus sam się replikował. Na uniwersytecie Rockeffelera stworzono sztuczną bakterię z różnych rzeczy, jej świecenie świadczy o tym że żyje itp. Zasób informacji potrzebny do powstania bakterii to książka średniej grubości (w przypadku wirusa to jedna strona). Trzeba pamiętać o tym że można stworzyć bakterię która może zabić dużo ludzi.
+		 \paragraph{Co da nam sztuczne życie?} Usuwanie złogów w naczyniach krwionośnych, poruszanie się w układzie pokarmowym człowieka i np. redukcja kwasu solnego żołądku. 
+	\section{Wykład 6}
+	\section{Wykład 7}
+		\paragraph{Podstawowe modele epidemiologiczne}
+		\begin{itemize}
+			\item SIR (susceptible/ill/removed) 
+			$$\dot{S}=BIS$$
+			$$\dot{I}=\beta IS - \gamma I$$
+			$$\dot{R} = \gamma I$$
+			$$S+I+R = const$$
+			\item SEIR (+ exposed)
+			\item SIS (susceptible/ill/susceptible) - jest gorszy, można kilkakrotnie być chorym
+			\item SEIRS (susceptible/exposed/ill/removed/sussceptible)
+		\end{itemize}
+		To są modele w których nie zakłada się w ogóle kontaktów strukturalnych.
+		Zastosowanie liczby parametrów w opracowanym modelu umożliwia dostosowanie go do:
+		\begin{itemize}
+			\item populacji różnych wielkości
+			\item kontaktów społeczne
+			\item infekcji o różnych właściwościach			
+		\end{itemize}
+		
+		Zasięg epidemii - im więcej jest szczepień, tym większe prawdopodobieństwo że epidemia się nie rozszerzy, ie przekroczy pewnego punktu. \\
+		Szczepienia celowane - szczepienie jednostek najbardziej podatnych na epidemie,  mają najgęstszą sieć kontaktów interpersonalnych, np. służby celne czy służby medyczne.
+		\subparagraph{Perkolacja} Zjawiska występujące w różnych materiąłach, mamy stop który jest reprezentowany przez sieć regularną, jesłi w tym stopie będą skłaanidkami szare i czarne kropki, i czarne kropki się ze sobą łączą, i to może prowadzić do przepływu prądu. Sperkolowany - przewodący ?. Jest to taka sytuacja że możemy znaleźć drogę prowadzącą od jednej krawędzi do drugiej.
+		\subparagraph{}To samo zachodzi w przypadku szczepień - powyżej pewnej ilości szczepień nie zachodzi już epidemia - bezpośredni związek z perkolacją.
+		\paragraph{KOLOKWIUM: 29.11}
+		\begin{itemize}
+			\item Podaj definicję automatów komórkowych i podział na klasy wg Wolphrama
+			\item Co to jest Game Of Life? Jakei cechy życia są obserwowane w GOL? NArysować 3 następne kroki czasowe.
+			\item Model epidemiologiczny SIR (Stany jednostek, równania różniczkowe, dwie krzywe: zasięg i krzywa epidemiologiczna)
+		\end{itemize}
+			
+			
+		
+		
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		
+		
+		
+
+		
+\end{document}

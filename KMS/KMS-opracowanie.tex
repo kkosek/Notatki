@@ -1,0 +1,359 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\title{KMS - opracowanie}
+\author{Adam Szczepański, Katarzyna Kosek}
+
+\begin{document}
+		\maketitle
+		\newpage
+		\pagenumbering{arabic}
+	\section{Wykład 1}
+		\subsection{MD - cechy podstawowe metody, zastosowania}
+		Metody dynamiki molekularnej służące do obliczania trajektorii przestrzeni fazowej zbioru molekuł z których każda polega klasycznym równaniom.
+        \paragraph{Cechy:} 
+        \begin{itemize}
+            \item klasyczna metoda: 
+            $$H = \Sigma_{i=1}^N\frac{p_i^2}{2m_i} + \Sigma_{i,j}u(V_{ij})$$
+            \item postać oddziaływania - oddziaływanie klasyczne gdzie $r_c$ to odległość odcięcia - konwencja najbliższego obrotu
+            \item periodyczne warunki brzegowe
+            \item efekty wymiaru
+        \end{itemize}
+        \paragraph{Zastosowania}
+        \begin{itemize}
+            \item symulacja procesu topnienia gazu szlachetnego
+            \item modelowanie układów biologicznych
+            \item wyznaczanie wielu średnich i chwilowych wiekości fizycznych  badanych układach
+        \end{itemize}
+        \subsection{Algorytm Verleta}
+        \begin{itemize}
+	        \item jest odwracalny w czasie
+	        \item zachowuje strukturę symplektyczną dynamiki Hamiltonowskiej
+	        \item całkowita energia układu fluuktuje wokół jakiejś wartości
+	        \item szybki, ale niezbyt dokładny
+	    \end{itemize}
+	    Algorytm podstawowy:
+	    $$r(t + \Delta t) = 2r(t) - r(t - \Delta t) + \frac{f(t)}{m}\Delta t^2$$
+	    $$v(t) = \frac{2r(t) - r(t - \Delta t)}{2\Delta t}$$
+        Przykład: układ monoatomowy z oddziaływaniem typu równanie L-J:
+        $$U(r_{ij}) = 4\epsilon((\frac{\sigma}{r_{ij}}^{12} - \frac{\sigma}{r_{ij}}^{6	}))$$
+		Część przyciągająca, część odpychająca.
+		\subsection{Algorytmy MD dla zespołów NVE, NVT, NPH}
+		\begin{itemize}
+			\item NVE (mikrokanoniczny)	- stałe N, V, E
+				\paragraph{Postać algorytmu}
+				\begin{itemize}
+					\item określenie położeń $r_i^0, r_i^1$
+					\item obliczanie sił dla n-tego kroku $F_i^n$
+					\item obliczenie położeń dla n+1 kroku ze wzoru
+					\item obliczenie prędkości dla n+1 kroku 
+					\item obliczenie wielkości termodynamicznych
+				\end{itemize}
+				$$E = const$$
+				$$T = const$$
+				$$E_C = E_k + U$$
+				średnia po trajektorii w takim układzie:
+				$$\bar{A} = <A>_{NVE} = \lim\limits_{t \rightarrow \infty} 
+				(t' - t_0)^{-1} \int_{t_0}^{t'}dtA(\vec{r}^N(t),\vec{p}^N(t),V)$$
+				$$\bar{E_k} = \lim\limits_{t \rightarrow \infty}(t' - t_0)^{-1}
+				\int_{t_0}^{t'}E_k(v(t))dt$$
+				$$\bar{U} = \lim\limits_{t \rightarrow \infty}(t' - t_0)^{-1}
+				\int_{t_0}^{t'}U(v(t))dt$$
+				Korzystając z zasady ekwipartycji energii:
+				$$\frac{1}{2}mV^2 \sim \frac{1}{2} k_BT$$
+				$$E_C = E_K + U$$
+				Organizacja symulacji: 
+				\begin{itemize}
+					\item inicjowanie - warunki początkowe
+					\item doprowadzenie do równowagi
+					\item realizacja wg zadanego algorytmu (liczenie hamiltonianu taki naprawdę podstawowy)
+				\end{itemize}
+			\item NVT (kanoniczny)
+					\begin{itemize}
+						\item T = const
+						\item należy odpowiednio zmodyfikować równania ruchu
+						$$<H>_{NVT} = \lim\limits_{t' \rightarrow \infty } 
+						\int_{t_0}^{t'}H(\vec{r}^N(t), \vec{p}^N(t), V)dt$$
+						\item należy dodać termostat w taki sposób aby bieżące średnie wartości różnych obserwabli były liczone w odpowiednim zespole statystycznym , jest wiele możliwych realizacji uwzględnienia termostatu
+						\item w niektórych krokach zmienia się prędkość (jeżeli występuje to zbyt rzadko, to nie osiągnie się temperatury końcowej, jeżeli za często następuje błądzenie przypadkowe)
+						\item dodanie siły wymuszającej
+					\end{itemize}
+				\paragraph{Algorytm}
+				\begin{itemize}
+					\item inicjalizacja położeń i prędkości
+					\item nowe położenia
+					$$r^{n+1} = r^n + nv_i^n  + n^2 \frac{F_i^n}{2m}$$
+					\item obliczenie $\Sigma_i^{n+1}mv^2$
+					\item przeskalowanie prędkości
+				\end{itemize}
+			\item NPH (izobaryczno - izoentalpowy)
+			\begin{itemize}
+				\item układ w którym temperatura i ciśnienie są ustalone
+				\item całkowita energia wewnętrzna nie jest zachowana
+				\item zachowana jest entalpia
+				$$<H>_{NPH} = \lim\limits_{t' \rightarrow \infty}(t' - t_0)^{-1}\int_{t_0}^{t'}dtH(p^N, v^N, V)$$
+			\end{itemize} 
+			\paragraph{Algorytm}
+			\begin{itemize}
+				\item inicjalizacja
+				\item określ objętość początkową 
+				\item określ początkową prędkość zmian odległości
+				\item oblicz $\rho ^ {n+1}$ oraz $V^{n+1}$
+				\item oblicz prędkości cząstkowe dla cząstek i objętości 
+				\item oblicz siły i potencjalną część wi..
+				\item oblicz ciśnienie $p^{n+1}$ na podstawie prędkości cząstkowych
+				\item oblicz prędkość zmian objętości
+				\item oblicz prędkość cząstek na podstawie prędkości cząstkowych
+			\end{itemize}
+		\end{itemize}
+		\section{Wykład 2}
+		\subsection{energia całkowita układu molekularnego w ujęciu klasycznym}
+		NIc o tym nie znalazłem :(
+		
+		\subsection{tw. o wiriale (Twierdzenie Clausiusa)}
+		-opisuje ono zależność pomiędzy średnią energią potencjalną a średnią energia kinetyczną cząstki lub układu.\newline	
+		- zgodnie z nim dla pojedynczej cząstki poruszającej się ruchem ograniczonym w polu $V=ar^{n}$,średnia energia spełnia zależność:\newline	
+		\begin{center}
+			2$<E_{k}>=n<E_{p}>$\newline
+		\end{center}
+		-zastosowanie w fizyce statystycznej\newline	
+		-pozwala obliczyć średnią kinetyczną układu bez analizowania ruchu pojedyńczych
+		cząstek\newline					
+		Przykłady:\newline		
+		a) oscylator harmoniczny $V=k{r}^{2}$\newline		
+		\begin{center}
+			$<E_{k}> = <E_{p}>$ (dwójki się skracają)\newline	
+		\end{center}		
+		b) planeta w polu grawitacyjnym $V=-\frac{k}{r}$\newline
+		\begin{center}
+			$2<E_{k}>=-<E_{p}>$\newline
+		\end{center}	
+		
+		\subsection{dynamika brownowska	– podstawowy opis}
+		Dynamika brownoska. Metoda BD polega na obliczaniu trajektorii w przestrzeni fazowej zbioru molekuł, z których każda spełnia równania Langevina w polu sił. Podobnie jak w przypadku metody MD, za pomocą metody BD możemy opidywać zarówno cząski punktowe, jak i zbiory cząstek złożonych z podjednostek. Trajektoria ruchu cząstki jest wyznaczana w oparciu o algorytm Ermaka i McCammona:\newline
+		\begin{center}
+			$m\frac{dv(t)}{dt}=R(t)-\beta v(t)$\newline
+		\end{center}
+		-siła losowa znika w uśrednieniu $<R(t)>=0$\newline
+		-siły są nieskorelowane dla 2 różnych czasów $<R(t),R(t')>=q\delta (t-t')$\newline
+		
+		\section{Wykład 3}
+		\subsection{metoda MC - podstawy}
+		Metoda Monte Carl (MC)- polega na przedstawieniu rozwiązania postawionego problemu w postaci parametru pewnej hipotetycznej populacji i używaniu losowej sekwencji liczb do tworzenia próbki tej populacji, na podstawie której można dokonać statystycznego oszacowania wartości badanego parametru\newline
+		-Duży zakres zastosowań
+		
+		\subsection{metoda MC dla zespołu mikrokanonicznego}
+		Przy symulacji metodą MC dla zespołu mikrokanonicznego, w hamiltonianie jest opuszczany człon odpowiadający energii kinetycznej. A zatem, obliczając własności układu, nie możemy stosować równań ruchu. Przyjętym podejściem jest wyznaczenie własności układu przy użyciu sumy stanów Z. W przypadku rozpatrywanego przez nas układu zachowawczego z liczbą cząstek N i daną liczbą V, rozkład dla zespołu mikrokanonicznego jest opisywany przez funkcje $\delta$ ,a zatem syme stanów można opisać następująco :\newline
+		\begin{center}
+			$Z=	\int_{\Omega}^{} \delta (H(x)-E)dx$
+		\end{center}
+		gdzie E- ustalona energia układu, H- hamiltonian układu (ograniczony do E)
+		Z każdą obserwablą A jest związana funkcja A(x), która zależy od stanu układu. Zakładamy że wartość obserwabli A jest równa średniej po zespole :
+		\begin{center}
+			$<A>_{NVE}=\frac{1}{Z}\int_{\Omega}^{} A(x)\delta(H(x)-E)dx$\newline
+		\end{center}
+		Robimy jakieś sztuczki i otrzymujemy(jeśli ktoś wie jakie niech napisze) :
+		\begin{center}
+			$Z=\sum_{x} \sum_{E_{D}} \delta(H(x)+E_{D}-E)dx$\newline
+		\end{center}
+		
+		Algorytm NVE Monte Carlo :\newline
+		\begin{enumerate}
+			\item Utworzy stan dla którego H(x)=E
+			\item Zadaj energie demona $E_{D}(np E_{D}=0)$
+			\item Wybierz jakąś część układu
+			\item Zmień tak stan lokalny układu, aby $x->x'$
+			\item Oblicz wytworzoną w ten sposób zmianę entropii, tj.\newline
+			\begin{center}	$\Delta H=H(x')-H(x)$ \end{center}
+			\item Jeżeli nastąpiło obniżenie energii, to zaakceptuj zmianę, przyjmij że $E_{D}-< E{D}-\Delta H $ i traktuj x' jako nową konfigurację.
+			\item Wróć do punktu 3.
+		\end{enumerate}
+		W końcowym rezultacie energie podlegają rozkładowi Boltzmanna co umożliwia policzenie energii:
+		\begin{center}
+			$P(E_{D})\infty exp(-\frac{E_{D}}{K_{B}T}))$ ( $\infty$ była obcięta)
+		\end{center}
+		\subsection{obliczanie całek metodą MC}
+		Jednym z zastosowań metod Monte Carlo jest wyznaczanie przybliżonej wartości całki danej funckij f(x) w zadanym przedziale [A,B]. W tym celu:\newline
+		\begin{enumerate}
+			\item Sporządzamy wykres funkcji w przedziale [A,B] i na jego podstawie wyznaczamy prostokąt o podstawie równej przedziałowi całkowania [A,B] a wysokości dowolnej byle nie mniejszej od maksimum funkcji w tym przedziale,
+			\item generujemy w tym prostokącie wiele punktów poprzez losowanie ich współrzędnych według rozkładów równomiernych o zakresach odpowiadających bokom prostokąta 
+			\item wyznaczamy przybliżoną wartość całki według następującej proporcji:
+			"stosunek pola pod krzywą (czyli całki) do pola prostokąta jest równy stosunkowi liczby punktów pod krzywą do liczby wszystkich wylosowanych punktów w tym prostokącie". 
+		\end{enumerate}
+		\section{Wykład 4}
+		\subsection{Rozwiązywanie r. Schroedingera na siatce dyskretnej –	przykład rozwiązania zagadnienia rozpraszania}
+		\begin{center}
+			$ \Psi (r) \lambda e^{ikr}+f(\theta)\frac{e^{ikr}}{r}$ \\
+			$\frac{d\sigma}{d\Omega}=|f(\theta)|^{2}$ \\
+			
+			całość jest na stronie zbereckiego materiały: rozpraszanie
+		\end{center}
+		\subsection{rozwiązywanie r. Schroedingera przez sprowadzenie do algebraicznego zagadnienia własnego}
+		\begin{center}
+			$ \hat{H} \Psi = E\Psi $  (*) \\
+			$ \hat{H} = -\frac{\hbar}{2m}\nabla ^{2}+V(x)$\\
+			$ \tilde{V}=\frac{V}{\frac{\hbar}{2m}}$ $\tilde{E}=\frac{E}{\frac{h^{2}}{2m}}$ -jednostki bezwymiarowe \\
+			$\tilde{H}=-\frac{d^{2}}{dx^{2}}+\tilde{V}(x) $ oraz   $|\Psi> = \Sigma _{i=1}^{\infty} \frac{C_{i}}{\phi _{i}}$ (*2)\\	
+		\end{center}
+		po wstawieniu (2*) do (*) i pomnożeniu z lewej przez <p|(dalej nie widac). Dostajemy układ  N równań\\
+		\begin{center}  
+			$<\phi_{1}|H\phi_{1}> C_{1} + <\phi_{2}|H\phi_{2}> C_{2} +..... = E C_{1}$(chyba)\\
+		\end{center}
+		Otrzymujemy układ $|\Psi>= \Sigma_{i}^{N} C_{i}|\psi>$ N-równań  na współczynniki $C_{i}$ co sprowadza się do algebraicznego zagadnienia własnego \\
+		\begin{center}
+			$H\vec{C}=E\vec{C}$ gdzie H- macierz hamiltonianu i $\vec{C}=[C_{1},C_{2},....,C_{N}]$ \\
+			$ \tilde{H}=\int \phi_{i} \tilde{H} \phi_{i}dx$\\
+		\end{center}
+		Z równania 	$H\vec{C}=E\vec{C}$(równanie macierzowe) otrzymujemy N wartości $E_{1},....,E_{N}$ natomiast energią stanu podstawowego jest minimum z tych wartości $E_{min}$.
+		\subsection{rozwiązywanie r. Schroedingera na siatce dyskretnej – schemat Numerova i metoda strzałów}
+		
+	\section{Wykład 5}
+		\subsection{Metoda wariacyjna dla oscylatora}
+        Polega ona na tym, że należy zgadnąć funkcję falową która najlepiej przybliża funkcję falową stanu podstawowego. Potem za pomocą odpowiednich przekształceń dochodzimy do rozwiązania 
+        Funkcjonał energii:
+		    $$F[\Psi] = E - \frac{\int_{-\infty}^{+\infty}\Psi^*H\Psi dr^3}{\int_{-\infty}^{+\infty}\Psi^*\Psi dr^3}$$	
+		    
+		    $$E_{\text{stanu cząstki}} = \delta F[\Psi] = 0 $$ gdyż energia stanu podstawowego dla wariacji funkcjonału wynosi 0
+		    $$P = <\Psi | H | \Psi >$$
+		    $$Q = <\Psi, \Psi>$$
+		    $$E = \frac{P}{Q}$$
+		    $$<H> = \int_{-\infty}^{+\infty} \Psi^* H \Psi d^3 r$$
+		    $$\delta E = 0 = \delta\int_{-\infty}^{+\infty} \Psi ^* H \varphi d^3r$$
+			$$\hat{H} = \hat{T} + \hat{V} = -\frac{\hbar^2}{2m}\nabla + \frac{m\omega^2}{2}r^2$$
+			Funkcja próbna:
+			$$\varphi = A(1 + \alpha r)e^{-\alpha r}$$
+			Z hamiltonianem (1) i funkcją próbną wyrażenie na E jest funkcją parametru $\alpha$. po obliczeniach mamy:
+			$$<H> = H(\alpha) = \frac{3}{14} \frac{\hbar ^2 \alpha ^2}{m} + \frac{m \omega^2  }{\alpha^2}\frac{81}{21}$$
+			Różniczkujemy równanie i rozwiązujemy równanie na $\alpha$:
+			$$H_{min} = ? \implies \frac{dH(\alpha)}{d\alpha} = 0$$
+			$$\alpha_{\min} = 3 \sqrt{\frac{3}{2}}\frac{m\omega}{\hbar}$$
+			czyli
+			$$H(\alpha_{\min})\approx1,57 \hbar \omega$$
+			Czyli całkiem ok (powinno być 1,5). Z zasady wariacyjnej można uzyskać tylko energię stanu podstawowego i sam stan podstawowy. Stany wzbudzone można otrzymać innymi metodami.
+		\subsection{Metoda wariacyjna dla cząsteczki $H^+$}
+			$$H = -\frac{1}{2} \nabla^2 - \frac{1}{v_1} - \frac{1}{v_2}$$
+			Wybierzmy bazę: jest to baza funkcji gaussowskich.
+			$$\alpha \in <\alpha_1, \alpha_2>$$
+			$$\varphi(\vec{r}) = \Sigma^N_{i=1, j=1} c_{ij}f_{ij}(\vec{r})$$
+			$$f_{ij} = exp(-(\frac{\alpha}{i^3})r_1^2 - \frac{\alpha}{j^3}r_2^2)$$
+			Należy zbudować macierz hamiltonianów i jeśli nie mamy bazy ortogonalnej to musimy rozwinąć zagadnienie w postaci uogólnionego zagadnienia rozproszonego.
+			$$H_c = ES_c$$
+			gdzie S to macierz overlapów, a $s_{ij}$ to funkcje bazowe bez hamiltonianów
+			Nasza super macierz:
+		$$	\begin{array}{cccc}
+				<11|H|11> & <11|H|12> & <11|H|21> & <11|H|22> \\ 
+				<12|H|11> & <12|H|12> & <12|H|21> &  <12|H|22>\\ 
+				<21|H|11> & <21|H|12> & <21|H|21> &  <21|H|22>\\ 
+				<22|H|11> & <22|H|12> & <22|H|21> &  <22|H|22>\\ 
+			\end{array} $$
+			
+			Minimalizujemy $E_c$.
+			Stosujemy regułę wariacyjną, funkcja falowa jest przewidywana w postaci:
+			$$\varphi(\vec{r_1}S_1, \vec{r_2}S_2)$$
+			Ej na serio nie wiem jak to dokończyć. To jest naprawdę okropne.
+			\subsection{Przybliżenie B-O i przyblizenie pola średniego}
+			W przybliżeniu Bohra-Oppenhaimera wykorzystuje się fakt, że jądra są o wiele cięższe od elektronów co czyni je o kilka rzędów wielkości wolniejszymi. Sprawia to, że elektrony błyskawicznie przystosowują się do ruchu jąder przez co można rozseparować jądrowe i elektronowe stopnie swobody. Z matematycznego punktu widzenia funkcję falową można rozłożyć na część elektronową i jądrową błyskawicznie przystosowują się do ruchu jąder przez co można rozseparować jądrowe i elektronowe stopnie swobody. Z matematycznego punktu widzenia funkcję falową można rozłożyć na część elektronową i jądrową
+            Przybliżenie B-O stosuje się do uzyskania energii potencjalnej, dzięki niej można stosować fizykę klasyczną.
+            Mamy cząsteczkę dwuatomową o N elektronach. 
+            $$\hat{H} = -\frac{\hbar^2}{2M_a}\Delta a - \frac{\hbar^2}{2M_b}\Delta b - \frac{\hbar^2}{2m} \Sigma^n_{i=1} \Delta i	+ \hat{V}$$
+            Dwa pierwsze człony - energia kinetyczna dowolnych jąder, ten z sumą to energia kinetyczna elektronów, V to energia oddziaływań między cząstkami.
+            \subparagraph{}Wprowadzamy odległość między nimi:
+            $$\hat{H} = \hat{H_0} + \hat{H}'$$
+            $$\hat{H_0} = -\frac{\hbar^2}{2m} + \Sigma_{i=1}^n \Delta r_i + V$$
+            $$\hat{H}' = -\frac{\hbar^2}{2\mu}\Delta R$$
+            Gdzie $r_i$ to odległości elektronów od jąder.
+            \subparagraph{}Elektronowe równanie Schrodingera niezależne od czasu:
+            $$\hat{H}_0\Psi(\vec{r}_1, \vec{r}_2, ... , R) = E_k^0(R)\Psi_k(\vec{r}_1, \vec{r}_2, ... , R)$$
+            Możemy wprowadzić funkcję falową całej cząstki:
+            $$\Psi = \Psi_k(\vec{r}_1, \vec{r}_2, ... , R)\Phi_k(R)$$
+            Równanie opisujące ruch jąder ma postać:
+            $$\hat{H_{ef}}\Psi_k(R) = k\Psi_k(R)$$
+            gdzie $H_{ef} = E_k^0(R) + H_{kk}'(r)$
+			gdzie to Hkk to wpływ jąder na ruch elektronu, i to pomijamy i to ejst to przybliżenie.
+					\section{Wykład 6}
+					\subsection{metoda HF – podstawy opisu}
+					Metoda Hartree-Focka - służy do rozwiązywania wielociałowego układu fermionów. Funkcja falowa takiego układu musi spełniać pewne warunki miedzy innymi antysymetrie.\newline
+					Szkic wyprowadzenia\newline
+					\begin{enumerate}
+						\item Postulujemy pewną postać funkcji falowej $\phi$
+						\item Wstawiamy zapostulowaną postać $\Phi$ do wyrażenia na całkowitą energie E
+						\item Rozpisujemy wariancje $\delta$E =0 ze względu na zmianę orbitali $\Psi$ uwzględniając warunki Lagrange'a
+						\item Otrzymujemy równania jednocząstkowe HF
+					\end{enumerate}
+					Funkcja falowa ma postać wyznacznika Slatera :
+					
+					$\phi =\frac{1}{\sqrt{n!}} \left[
+					\begin{array}{ccccc}
+					\phi_{1}(r_{1}) & \phi_{1}(r_{2}) &... &\phi_{1}(r_{n}) &\\
+					\phi_{2}(r_{1}) & \phi_{2}(r_{2}) &... &\phi_{2}(r_{n}) &\\
+					...             &     ...         &... &...           &\\
+					\phi_{n}(r_{1}) & \phi_{n}(r_{2}) &... &\phi_{n}(r_{n}) &\\
+					\end{array}
+					\right]
+					\qquad 
+					$	
+					gdzie $\phi_{i}(r_{i})$ spinorbitale \newline
+					
+					Zakładając ,że sponorbital jest absorbowany przez 2 elektrony :\newline
+					\begin{center}
+						$\Psi_{i}(r_{j})=\Psi_{i}(j) $ gdzie $\phi_{i}(j)$ $\Psi_{i}(j)$ (nie widzę dokładnie)
+					\end{center}
+					
+					\subsection{metoda HF –	algorytm rozwiązania}
+					Równanie HF rozwiązuje się algorytmem samozgodnym(chyba nie widzę dokładnie)  wprowadza się średni potencjał:
+					\begin{center}
+						$\tilde{V}(i)= \Sigma_{q=1}^{n/2} [2 \tilde{J}_{q}(i)-\tilde{K}_{q}(i)]$\\
+						$\tilde{F}(i)=\tilde{h}(i)+\tilde{V}(i)$ - operator Focka
+					\end{center}
+					Schemat Algorytmu:
+					\begin{enumerate}
+						\item zakładamy $\Phi_{i}$ - każdy stan obsadzamy 2 elektronami
+						\item Budujemy odpowiednio operatory kulombowski ($\tilde{J}_{q}(i)$) i wymiany($\tilde{K}_{q}(i)]$) :\\
+						$\tilde{J}_{p}(i) \Psi_{q}(i)=[\int \Psi_{p}^{*}(j)\frac{e_{2}}{r_{ij}}\Psi_{p}(j)d\tau_{j}]\Psi_{q}(i)$
+						
+						$\tilde{K}_{p}(i) \Psi_{q}(i)=[\int \Psi_{p}^{*}(j)\frac{e_{2}}{r_{ij}}\Psi_{q}(j)d\tau_{j}]\Psi_{p}(i)$
+						\item $F\Psi=\epsilon \Psi $ (duży epsilon)- otrzymujemy poziomy energetyczne 
+						\item obliczamy energie całkowitą E
+						\item $|E_{i}-E_{i-1}|<\Delta E$ jeśli tak to koniec ,a jeśli nie to  wróć do 2
+					\end{enumerate}
+					
+					\subsection{rozwiązywanie równań HF przez rozwinięcie w bazie funkcji zlokalizowanych}
+					
+					KURWA ADAM ogarnij się
+			\section{Wykład 9}
+			\subsection{Wariacyjne Kwantowe Monte Carlo}
+			Z metody wariacyjnej mamy funkcję falową wielocząstkową $\Psi\vec{\alpha}(\vec{r})$ gdzie $\vec{\alpha} = \{\alpha_1... ,\alpha_N\}$, $\vec{r} = \{r_1... ,r_N\}$. Energia całkowita: 
+			$$<E> = \frac{1}{S} = \int\Psi\vec{\alpha}^*\vec{r}H\Psi\vec{\alpha}\vec{r}$$
+			Kwantowe MC polega na minimalizacji <E>. Stosujemy algorytm metropolisa z użyciem bładzenia przypadkowego (random walker). Definiujemy energię lokalną:
+			$$E_L(R) = \frac{H\Psi_T(R)}{\Psi_T(R)}$$
+			$$\Psi_T^\alpha(r) \sim r$$
+			$$<E> = \frac{\int dR \Psi^2_T(R)E_L(r)}{\int dR \Psi^2_T(R)}$$
+			$$\Psi_T \in R$$
+	        Konstruuje się algorytm typu metropolisa z rozkładu postaci:
+	        $$\rho(R) = \frac{\Psi_T^2(R)}{\int dR'\Psi_r^2(R')}$$
+	        \paragraph{Algorytm:}
+	        \begin{itemize}
+	        	\item ustawiamy N błądzących na losowych pozycjach: wybieramy błądzącego
+	        	\item przesuwamy błądzącego na nową pozycję np. przesuwając pojedynczą cząstkę
+	        	\item obliczamy prawdopodobieństwo $p=\frac{\Psi_T(R')}{\Psi_T(R)}$ gdzie R i R' to odpowiednio stara i nowa konfiguracja
+	        	\item jeśli $p < 1$ to akceptujemy nową pozycje z prawdopodobieństwem, w przeciwnym wypadku akceptujemy gdy ilość kroków nie jest P większa od maksymalnego kroku
+	        	\item wartość oczekiwana energii jest liczona jako średnia po próbach wygenerowanych w procedurze, np. dla oscylatora
+	        \end{itemize}
+	        \section{Wykład 10}
+	        \subsection{Użycie AG dla optymalizacji struktur ciał stałych}
+	        \paragraph{USPEX} przewidywanie struktur ciał stałych w oparciu o AG. Zagadnienie: znaleźć minimum dowolnej funkcji wielu parametrów. Metodą najmniejszego spadku nie trafimy do minimum - zagadnienie zwodniczości AG.
+	        \subparagraph{Algorytm}
+			\begin{itemize}
+				\item inicjalizacja
+				\item oceniamy przystosowanie każdego elementu populacji
+				\item selekcja 
+				\item operatory genetyczne 
+				\item nowa populacja 
+			\end{itemize} 			
+			\subparagraph{CSP} - crystal structure prediction \\
+			Mając skład stechiometryczny komórki elementarnej określić strukture najbardzeij stabilna energetycznie. Kombinatorycznie:
+			$$C = \binom{V / \sigma^3}{V}\Pi_i \binom{N}{n_i}$$
+			
+\end{document} 
