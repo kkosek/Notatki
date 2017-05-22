@@ -560,6 +560,100 @@
 		dla R reakcji chemicznych. \\
 		\paragraph{Klasyfikacja przejść fazowych:}
 		Przejście fazowe jest n-tego rzędu jeśli w procesie przejścia fazowego wszystkie pochodne potencjału chemicznego G rzędu n-1 są ciągłe, a przynajmniej jedna pochodna rzędu n jest nieciągła.
+	\section{Wykład 6} 
+		\begin{equation}
+			dG = -SdT + Vdp + \mu dN
+		\end{equation}
+		Jeżeli $ (\frac{\partial G}{\partial T})_{p,N}$ jest nieciagła to $ S $ też jest nieciągłe. Entropia kryształu jest mniejsza (skokowo) niż entropia cieczy.
+		\begin{equation}
+		S_{cieczy} = S_{kryształu} + \Delta S = \frac{Q_{topnienia}}{T}
+		\end{equation}
+		Jeżeli ciepło przemiany fazowej jest różne od zera to przejście fazowe jest \textbf{pierwszego rzędu}. \\
+		Jeżeli $ (\frac{\partial G}{\partial p})_{T,N} $ jest nieciągła to $ V $ również jest nieciągłe.\\
+		Objętość kryształu jest mniejsza (skokowo) niż objętość cieczy.
+		\begin{equation}
+		V_{cieczy} = V_{kryształu} + \Delta V
+		\end{equation}
+		Jeżeli różnica objętości podczas przemiany fazowej jest różna od zera to przejście fazowe jest \textbf{pierwszego rzędu}.
+		Jeżeli $ (\frac{\partial ^ 2 G}{\partial S ^ 2})_{p,N} $ jest nieciągła to $ \frac{\partial S}{\partial T} $ też jest nieciągła.
+		\begin{equation}
+		dS = \frac{dQ}{T} \Rightarrow \frac{dS}{dT} = \frac{\frac{dQ}{dT}}{T} = \frac{C_p}{T}
+		\end{equation}
+		Jeżeli $ C_p $ jest różne dla przejść fazowych, to przejście jest to przejście fazowe \textbf{drugiego rzędu}.
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\
+			\includegraphics[scale=0.45]{przejsciafazowe.jpeg}
+			\caption{Przykład dla przejść fazowych - ferromagnetyk}
+		\end{figure}
+		\subsection*{III zasada termodynamiki} 
+		\begin{equation}
+		 S(T \rightarrow 0K) \approx 0  
+		\end{equation}
+		dokładniej: $ S \approx k_B ln(I)$ i $ I $ jest bardzo małe \\
+		\begin{equation}
+		S = k_Bln(\Omega)
+		\end{equation}  $ \Omega $ - liczba możliwych mikrostanów.
+		Gdy $ T \rightarrow 0K$, to $ <U> \rightarrow <U_min> $ (minimum globalne). Krotność degeneracji $ <U_{min}> $ odpowiada kilku stanom układu.
+		\paragraph{} Z III zasady termodynamiki wynika ze temperatura $ 0K $ nie może zostać osiągnięta za pomocą skończonej liczby cyklów termodynamicznych. Ponadto: 
+		\begin{equation}
+		C_p,C_v \xrightarrow{T_k \rightarrow 0K} 0
+		\end{equation}
+		\paragraph{Prawo Clausius'a-Clapeyron'a (dla przejść fazowych pierwszego rodzaju)}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{clausius.jpeg}
+			\caption{Prawo Clausiusa - Clapeyrona}
+		\end{figure}
+		\begin{equation}
+		d\mu = \frac{-SdT+Vdp}{N}
+		\end{equation}
+		\begin{equation}
+		\mu_L(T,p) = \mu_G(T,p)
+		\end{equation}
+		\begin{equation}
+		d\mu_L = d\mu
+		\end{equation}
+		\begin{equation}
+		-S_LdT + V_Ldp = -S_GdT + V_Gdp
+		\end{equation}
+		\begin{equation}
+		\underbrace{(S_G - S_L)dT}_{\frac{Q_p}{T}} = \underbrace{(V_G - V_L)dp}_{\Delta V} 
+		\end{equation}
+		\begin{equation}
+		\frac{Q_p}{T}dT = \Delta Vdp \Rightarrow (\frac{dp}{dT})_{cpf} = 
+		\frac{Q_p}{\Delta VT} \text{  lpf.}
+		\end{equation}
+		\paragraph{FIZYKA STATYSTYCZNA}
+		Przestrzeń fazowa $ \Omega $
+		\begin{equation}
+		\Omega = \{ \lceil \vec{r_1}, \vec{p_1} ,..., \vec{r_N}, \vec{p_N} \rceil\}
+		\end{equation}
+		Zbiór wektorów 6N - wymiarowych.
+		\begin{equation}
+		\uparrow \uparrow \uparrow \downarrow \downarrow \uparrow \downarrow \downarrow 
+		\end{equation}
+		Momenty magnetyczne $ \Omega = \underbrace{\{ \lceil 1,1,1,-1-1,1,-1,-1 \rceil\}}_{N} $, $ d\Gamma $ - unormowane elementy przestrzeni fazowej.
+		\begin{equation}
+		d\Gamma = \frac{d^3r_1d^3p_1...d^3r_Nd^3p_N}
+		{N!\cdot \hbar^{3N}}
+		\end{equation}
+		Wielkości makroskopowe są średnimi po czasie (trajektorii) wielkości makroskopowych.
+		\begin{equation}
+		<f(t)>_t = <f>_p
+		\end{equation}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{statystyczna.jpeg}
+			\caption{Prawo Clausiusa - Clapeyrona}
+		\end{figure}
+		
+		
+		
+		
 		
 		
 		
