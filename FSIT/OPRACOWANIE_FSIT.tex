@@ -650,16 +650,162 @@
 			\includegraphics[scale=0.5]{statystyczna.jpeg}
 			\caption{Prawo Clausiusa - Clapeyrona}
 		\end{figure}
+	\section{Wykład 7}
+		\subsection*{3 zespoły statystyczne}
+		\paragraph{Zespół statystyczny} to zbiór kopii tego samego układu w różnych mikrostanach, a tym samym makrostanem.
+		\paragraph{}Wyróżniamy 3 zespoły statystyczne:
+		\begin{itemize}
+			\item Układ izolowany: zespół mikrokanoniczny 
+			\begin{equation}
+			N,E,V=const
+			\end{equation}
+			\item Układ zamknięty: zespół kanoniczny
+			\begin{equation}
+			N,V = const
+			\end{equation}
+			\item Układ otwarty: zespół makrokanoniczny
+		\end{itemize}
+		\begin{equation}
+		\text{zespół statystyczny} \longleftrightarrow \text{statystyczny rozkład prawdopodobieństwa}
+		\end{equation}
+		\paragraph{Dla zespołu mikrokanonicznego:}
+		\begin{equation}
+		P(\Omega) = \frac{1}{\Delta \Gamma}
+		\end{equation}
+		Gdzie $ \Omega $ to przestrzeń fazowa opisująca mikrostany a $ \Delta \Gamma $ to objętość dozwolonej przestrzeni fazowejht
+		\begin{equation}
+		S = k_Bln(\Delta \Gamma)
+		\end{equation}
+		\paragraph{Przykład: oscylator harmoniczny}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{przestrzenfazowa.png}
+			\caption{Przestrzeń fazowa oscylatora harmonicznego}
+		\end{figure}
+		\begin{equation}
+		H = \frac{p^2}{2m} + \frac{m\omega^2x^2}{2}
+		\end{equation}
+		\begin{equation}
+		x=x_0sin(\omega t)
+		\end{equation}
+		\begin{equation}
+		p=p_0cos(\omega t)
+		\end{equation}
+		$ \Delta \Gamma $ to pole tego kształtu.
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{oscylator.png}
+			\caption{Oscylator harmoniczny}
+		\end{figure}
+		\begin{equation}
+		\sum_{elipsy}^{} = \pi x_0p_0
+		\end{equation}		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		\begin{equation}
+			E = \frac{kx_0^2}{2} = \frac{m\omega^2x^2}{2} \pm \frac{p_0^2}{2m}
+		\end{equation}
+		\begin{equation}
+		\sum_{elipsy}^{} = 
+		\pi \frac{1}{\omega}\sqrt{\frac{2E}{m}}\cdot \sqrt{2mE} = 
+		\frac{2\pi}{\omega}E
+		\end{equation}
+		\begin{equation}
+		\Delta \Gamma = \Sigma_2 - \Sigma_1 = \frac{2\pi}{\omega}\Delta E
+		\end{equation}
+		\begin{equation}
+		\Delta \tilde{\Gamma} = \frac{\Delta\Gamma}{h}
+		\end{equation}
+		Znormalizowana objętość przestrzeni fazowej
+		\paragraph{}
+		\begin{equation}
+		X=X(x,p)
+		\end{equation}
+		gdzie X jest obserwablą
+		\begin{equation}
+		<X>_t = \frac{1}{T\Delta E} \int_{E}^{E + \Delta E}\int_{0}^{T}X(t,E)dtdE
+		\end{equation}
+		gdzie
+		\begin{equation}
+		x = x(t,E),
+		p = p(t,E)
+		\end{equation}
+		\begin{equation}
+		x = \sqrt{\frac{2E}{m\omega^2}}sin(\omega t)
+		\end{equation}
+		\begin{equation}
+		p = \sqrt{2Em} cos(\omega t)
+		\end{equation}
+		Chcemy wymienić zmienne $ (E,t) \longrightarrow (x,p)$
+		\begin{equation}
+		y=
+		\begin{vmatrix}
+		\frac{\partial x}{\partial t} && \frac{\partial x}{\partial E} \\
+		\frac{\partial p}{\partial t} && \frac{\partial p}{\partial E}
+		\end{vmatrix}
+		=
+		\begin{vmatrix}
+		\sqrt{\frac{2E}{m\omega ^2}}\omega cos(\omega t) && \sqrt{\frac{1}{2Em\omega^2}}sin(\omega t) \\
+		-\sqrt{2Em}\omega sin(\omega t) &&\sqrt{\frac{m}{2E}}cos(\omega t)
+		\end{vmatrix}
+		=1
+		\end{equation}
+		\begin{equation}
+		<X>_t = \frac{\omega}{2 \pi} \cdot \frac{1}{\Delta E} \int\int X(x,p) \cdot \underbrace{1}_{Jakobian} \cdot dxdp
+		\end{equation}
+		Całkujemy po "obwarzanku".
+		\begin{equation}
+		\Delta \Gamma = \frac{2\pi}{\omega h}\Delta E
+		\end{equation}
+		Co wynika z poprzednich rozważań.
+		\begin{equation}
+		<X>_t = \frac{1}{h\Delta \Gamma}\int\int X(x,p)dxdp = 
+				\frac{1}{\Delta \Gamma}\int\int X(x,p)\frac{dxdp}{h}
+		\end{equation}
+		\begin{equation}
+		P(x,p) = \frac{1}{\Delta \Gamma} = P(\Omega)
+		\end{equation}
+		\begin{equation}
+		S = k_Bln(\Delta \Gamma) = -k_Bln(P_0)
+		\end{equation}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{przestrzenoscylator.jpeg}
+			\caption{Przestrzeń fazowa}
+		\end{figure}
+		\paragraph{Zespół kanoniczny}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{kanoniczny.jpeg}
+			\caption{Zespół kanoniczny}
+		\end{figure}
+		\begin{equation}
+		\text{układ} + \text{termostat} = \text{nadukład izolowany}
+		\end{equation}
+		\begin{equation}
+		E << E'
+		\end{equation}
+		\begin{equation}
+			\begin{array}{cc}
+			 E + E' = E_t \\
+			 S + S' = S_t \\
+			 \text{t - total}
+			\end{array}
+		\end{equation}
+		\begin{equation}
+		P(\Omega, \Omega ') = \frac{1}{\Delta \Gamma_t}
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+		P(\Omega) ~ \Delta \Gamma'(E') = exp(\frac{S'}{k_B}) = \\
+		= exp(\frac{S'(E')}{k_B}) = exp(\frac{S'(E_t - E)}{k_B}) = 
+		\Big \langle S'(E_t) + \frac{\partial S'}{\partial E'} dE \Big \rangle = \\
+		= exp \lceil \frac{1}{k_B}(S'(E_t) - \frac{E}{T})\rceil = 
+		\frac{1}{2} exp\lceil \frac{-E}{k_BT} \rceil
+	
+		\end{array}
+		\end{equation}
 \end{document}
