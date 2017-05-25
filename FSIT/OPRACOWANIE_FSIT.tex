@@ -919,8 +919,77 @@
 		 e^{-\beta (E_N - \mu N)} = k_BT\frac{\partial}{\partial \mu}\lceil ln(\dot{z})\rceil
 		\end{array}
 		\end{equation}
-		
-		
+	\section{Wykład 9}
+		Dla wielkiego rozkładu kanonicznego:
+		\begin{equation}
+		S = -k_B<ln(P)>
+		\end{equation}
+		\begin{equation}
+		P(\Omega_N, N) = \frac{1}{\dot{Z}}e^{-\beta(E(\Omega) - \mu N)}
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+			S = -k_B \lceil - ln(\dot{z}) - <\beta(E - \mu N)> \rceil = 
+			k_Bln(\dot{z}) + \frac{1}{T}(<E> - \mu<N>) = \\ \\
+			k_Bln(\dot{z}) + \frac{U}{T} - \frac{\mu}{T}<N>
+		\end{array}
+		\end{equation}
+		\begin{equation}
+		F = U - TS = U - T(k_Bln(\dot{z}) + \frac{U}{T} - \frac{\mu}{T}<N>) = -k_BTln(\dot{z}) + \mu <N>
+		\end{equation}
+		\begin{equation}
+		G = \mu <N>
+		\end{equation}
+		(134) wynika z definicji.
+		\begin{equation}
+		F = G - k_BTln(\dot{z})
+		\end{equation}
+		(135) wynika z przyrównania (134)
+		\begin{equation}
+		G = F + pV
+		\end{equation}
+		(136 z definicji)
+		\begin{equation}
+		F = F + pV - k_Bln(\dot{z})
+		\end{equation}
+		\begin{equation}
+		pV = k_BTln(\dot{z})
+		\end{equation}
+		(138) to \textbf{równianie stanu}.
+		\paragraph{Przykład: układ oscylatorów}
+		\begin{equation}
+		H_i = \frac{kx_i^2}{2} + \frac{p_i^2}{2m}
+		\end{equation}
+		\begin{equation}
+		H = \sum_{i=1}^{N}H_i
+		\end{equation}
+		Zakładamy że $ k $ i $ m $ są takie same.
+		\begin{equation}
+		z_N = (z_1)^N
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+			z_1 = \int_{- \infty}^{\infty} \int_{- \infty}^{\infty} 
+			e^{-\beta(\frac{kx^2}{2} + \frac{p^2}{2m})}dxdp = \\ \\
+			= \int_{- \infty}^{\infty}exp\lceil -\beta \cdot \frac{kx^2}{2}dx \rceil \cdot
+			\int_{- \infty}^{\infty}exp\lceil -\beta \cdot  \frac{p^2}{2m}dp \rceil = \\ \\
+			\langle \int_{- \infty}^{\infty} e^{-ax^2}dx = \sqrt{\frac{\pi}{a}} \rangle =
+			\sqrt{\frac{\pi}{\frac{k\beta}{2}}} \cdot \sqrt{\frac{\pi}{\frac{\beta}{2m}}} = 
+			2\pi k_B T\sqrt{\frac{m}{k}}
+		\end{array}
+		\end{equation}
+		\begin{equation}
+		Z_N = (2\pi k_B T)^N(\frac{m}{k})^{\frac{N}{2}} = A\beta^{-N} \text{ , A = const} 
+		\end{equation}
+		\begin{equation}
+		U = -\frac{\partial}{\partial \beta}ln(z) = -\frac{\partial}{\partial \beta} 
+		\lceil ln(A) - Nln(\beta) \rceil = \frac{N}{\beta} = k_BT \cdot N 
+		\end{equation}
+		Dla układu trójwymiarowego $ U = k_BT \cdot 3N $ ciepło właściwe: 
+		\begin{equation}
+		C_V = (\frac{dU}{dT})_V = 3N\cdot k_B
+		\end{equation}		
+					
 		
 		
 		
