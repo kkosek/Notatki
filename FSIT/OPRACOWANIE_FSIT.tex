@@ -808,4 +808,126 @@
 	
 		\end{array}
 		\end{equation}
+	\section{Wykład 8}
+		\begin{equation}
+		P(\Omega) = \frac{1}{Z}e^{-\beta E(\Omega} \text{ i } \beta = \frac{1}{k_BT}
+		\end{equation}
+		Gdzie Z to suma stanów (suma statystyczna). Aby obliczyć $ z $ należy:
+		\begin{equation}
+		\int e^{-\beta E}d\Omega = z \text{ lub } \sum_{\Omega}^{} e^{-\beta E} = z
+		\end{equation}
+		\begin{equation}
+		z = z(\Omega)
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+		U = <E> = \sum_{\Omega}^{}E(\Omega)P(\Omega) = \frac{1}{Z}\sum_{\Omega}^{}E(\Omega)e^{-\beta E(\Omega)} =\\ \\
+		=\frac{-1}{z}\frac{\partial }{\partial \beta} \underbrace{\sum_{\Omega}^{}e^{-\beta E(\Omega)}}_{z} = -\frac{1}{z} \cdot z' = -\frac{\partial}{\partial \beta} \lceil ln(z) \rceil
+		\end{array}{}
+		\end{equation}
+		\begin{equation}
+		S = k_B ln(\Delta \Gamma) = -k_Bln(P_0)
+		\end{equation}
+		gdzie $ P_0 = \frac{1}{\Delta \Gamma} $ - \textbf{rozkład mikrokanoniczny}
+		\begin{equation}
+		S = -k_B \int P(\Omega) ln\lceil P(\Omega) \rceil d\Omega
+		\end{equation}
+		\paragraph{Postulat:} obliczone S w (111) sprawdza się dla każdego rozkładu.
+		\begin{equation}
+		S = -k_B<ln\lceil P(\Omega) \rceil>
+		\end{equation}
+		\begin{equation}
+		S = -k_B<-ln(z) - \beta E(\beta)> = k_Bln(z) + \frac{k_B}{k_BT}<E(\Omega)> = k_Bln(z) + \frac{U}{T}
+		\end{equation}
+		\begin{equation}
+		F = U - TS = U - T(k_Bln(Z) + \frac{U}{T}) = - k_BTln(z) \Rightarrow z = e^{-\beta F}
+		\end{equation}
+		Zespół kanoniczny jest w przybliżeniu zespołem mikrokanonicznym.
+		\begin{equation}
+		\frac{\partial E}{<E>} \xrightarrow[N \Rightarrow \infty]{} 0 \text{ i } \frac{\partial E}{<E>} ~ \frac{1}{\sqrt{N}} \text{ i } \delta E \text{ to fluktuacje energii}
+		\end{equation}
+		\paragraph{Dowód:}
+		\begin{equation}
+		\begin{array}{cc}
+		\sigma^2_E = \sigma^2 = <(E-U)^2> = <E^2> - <E>^2 = \langle <E> = -\frac{\partial}{\partial \beta} ln(z) \rangle = \\ \\
+		= \sum_{\Omega}^{}E^2(\Omega) \cdot \frac{1}{z}e^{-\beta E} - 
+		\lceil \frac{\partial}{\partial \beta} ln(z)\rceil^2 = 
+		\frac{1}{z} \frac{\partial ^2}{\partial \beta^2} \sum_{\Omega}^{} e^{-\beta E} - 
+		\lceil \frac{\partial}{\partial \beta}ln(z)\rceil^2 = \\ \\
+		= \frac{z''}{z} - (\frac{z'}{z})^2 = \frac{zz'' - (z')^2}{z^2} = (\frac{z'}{z})' = 
+		-\frac{\partial}{\partial \beta}U
+		\end{array}
+		\end{equation}
+		\begin{equation}
+		\sigma ^2 = - (\frac{\partial U}{\partial T})_V \cdot \frac{\partial T}{\partial \beta} = C_V \cdot k_BT^2 = 
+		(k_BT) \cdot Tc_V \sim N
+		\end{equation}
+		\begin{equation}
+		\sigma^2 \sim N \Rightarrow \sigma \sim \sqrt{N}
+		\end{equation}
+		\begin{equation}
+		\frac{\sigma}{E} \sim \frac{1}{\sqrt{N}} \xrightarrow[N \rightarrow \infty]{} 0 \text{ \textbf{cnd.} }
+		\end{equation}
+		\paragraph{Jeżeli mamy układ nieoddziałujący to:}
+		\begin{equation}
+		E = E_1 + E_2 + ... + E_N
+		\end{equation}
+		\begin{equation}
+		e^{-\beta E} = e^{-\beta E_1} \cdot e^{-\beta E_2} \cdot ... \cdot e^{-\beta E_N}
+		\end{equation}
+		\begin{equation}
+		z = \sum_{\Omega_1}^{}\sum_{\Omega_2}^{}...\sum_{\Omega_N}^{}e^{-\beta E} = 
+		Z_1\cdot Z_2 \cdot ... Z_N
+		\end{equation}
+		Powyżej: multiplikatywność sumy statystycznej.
+		\paragraph{Wielki rozkład kanoniczny (makrokanoniczny)}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{wielkikanoniczny.jpeg}
+			\caption{Wielki rozkład kanoniczny}
+		\end{figure}
+		\begin{equation}
+		N + N' = N_t \text{ , } S + S' = S_t \text{ , } E + E' = E_t
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+			P(\Omega, N) \sim \Delta \Gamma' = exp\lceil \frac{S'}{k_B} \rceil = 
+			exp\lceil \frac{S'(E',N')}{k_B} \rceil= \\ \\
+			 = exp\lceil {S'(E',N')}\frac{1}{k_B} {S'(E_t - E,N_t - N)} \rceil= \\ \\ 
+			 = exp\lceil \frac{1}{k_B}(S'(E_t, N_t) + (-E)\frac{\partial S'}{\partial t'} + 
+			 (-N)\frac{\partial S'}{\partial N'} \rceil = \\ \\
+			 = \langle dS = \frac{dU - \mu dN}{T} \rangle = 
+			 exp \lceil C + \frac{1}{k_B} (\frac{N\mu}{T} - \frac{E}{T})
+		\end{array}
+		\end{equation}
+		\begin{equation}
+		P(\Omega, N) = \frac{1}{\dot{z}} e^{-\beta (E - \mu N)}
+		\end{equation}
+		Gdzie $ \dot{z} $ to wielka suma statystyczna.
+		\begin{equation}
+		\dot{z} = \sum_{Z}^{}\sum_{\Omega_N}^{}e^{-\beta (E - \mu N)}
+		\end{equation}
+		\begin{equation}
+		\dot{z}_{12} = \dot{z}_1 \cdot \dot{z}_2
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+		<N> = \sum_{Z}^{}\sum_{\Omega_N}P(\Omega_N, N) \cdot N = \\ \\
+		 = \sum_{Z}^{}\sum_{\Omega_N}\frac{1}{\dot{z}}e^{-\beta (E - \mu N)} = \\ \\
+		 \frac{1}{\dot{z}} \sum_{Z}^{}\sum_{\Omega_N} \frac{1}{\beta}\frac{\partial}{\partial \mu} 
+		 e^{-\beta (E_N - \mu N)} = k_BT\frac{\partial}{\partial \mu}\lceil ln(\dot{z})\rceil
+		\end{array}
+		\end{equation}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 \end{document}
