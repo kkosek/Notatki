@@ -1025,9 +1025,84 @@
 			\includegraphics[scale=0.5]{boltzmann.jpg}
 			\caption{Rozkłady Boltzmanna dla różnych temperatur}
 		\end{figure}
-		
-		
-		
-		
-		
+	\section{Wykład 10}
+		\paragraph{Gazy kwantowe (brak oddziaływań między nimi)}
+	\begin{figure}[ht]
+		\label{fig:fig1}
+		\centering
+		\includegraphics[scale=0.5]{gazy_kwantowe.jpeg}
+		\caption{Fermiony: maksymalnie jeden fermion na danym poziomie}
+	\end{figure}		
+		\subparagraph{Fermiony,} czyli cząstki o spinie połówkowym podlegają rozkładowi \textbf{Fermiego-Diraca} oraz zakazowi Pauliego.
+		\begin{equation}
+		N_i = 0,1
+		\end{equation}
+		Przykłady: elektron, pozyton, neutron, neutrino. 
+		\subparagraph{Bozony,} czyli cząstki o spinie całkowitym podlegają rozkładowi \textbf{Bosego - Einsteina} oraz nie podlegają zakazowi Pauliego.
+		\begin{equation}
+		N_i = 1,2,3...
+		\end{equation}
+		Przykłady: fotony, fonony, magnony, plazmony.
+		\subparagraph{} Przy odpowiedniej temperaturze elektrony, czyli fermiony tworzą bozon - \textbf{parę Coopera}.
+		\paragraph{Rozkład Fermiego-Diraca}
+		\begin{equation}
+		<N> = \sum_{\alpha}^{}<N_\alpha>
+		\end{equation}
+		Gdzie $ <N> $ to średnia liczba cząstek w rozkładzie kanonicznym a poziomy $ \alpha $ są niezależne.
+		\begin{equation}
+		<N_\alpha > = \frac{1}{\beta}\frac{\partial}{\partial \mu} ln \lceil \dot{Z} \rceil
+		\end{equation}
+		\begin{equation}
+		\dot{Z}_\alpha = \sum_{N_\alpha = 0}^{1}e^{-\beta(N_\alpha E_\alpha - \mu N_\alpha)} = 
+		1 + e^{-\beta (E_\alpha - \mu)}
+		\end{equation}
+		\begin{equation}
+		<N_\alpha> = \frac{1}{\beta}\frac{\partial}{\partial \mu}(\dot{Z}) \cdot \frac{1}{\dot{Z}} = 
+		 \frac{1}{\beta}\frac{\beta e^{-\beta (E_\alpha - \mu)}}{1 + e^{-\beta (E_\alpha - \mu)}} = 
+		 \frac{1}{1 + e^{\beta (E_\alpha - \mu)}} = f_{FD}
+		\end{equation}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{fermi_dirac.jpg}
+			\caption{Rozkład Fermiego-Diraca: energia dla której średnia liczba cząstek to 1/2 to energia fermiego $ (E_f) $. $ N = 1 $ dla $ T = 0 $. Jest to funkcja symetryczna, tzn. $ S_1 = S_2 $, w ogólności $ \mu = \mu(T, p) $. Gdy $ k_BT << \mu $ to mamy do czynienia z obszarem niskich temperatur.}
+		\end{figure}	
+		\paragraph{Rozkład Bosego-Einsteina}
+		\begin{equation}
+		\dot{Z}_\alpha = \sum_{N_alpha = 0}^{\infty} e^{-\beta(N_\alpha E_\alpha - \mu N_\alpha)} = 
+		\sum_{N_\alpha = 0}^{\infty} \lceil e^{-\beta (E_\alpha - \mu)} \rceil^{N_\alpha} = 
+		\sum_{N_\alpha=0}^{\infty}q^{N_\alpha}
+		\end{equation}
+		\subparagraph{}Potencjał chemiczny dla bozonów musi być mniejszy od energii najniższego stanu energetycznego.
+		\begin{equation}
+		q < 1 \text{ , to } E_\alpha > \mu
+		\end{equation}
+		\begin{equation}
+		\dot{Z}_\alpha = \frac{1}{1-q} = \frac{1}{1 - e^{-\beta (E_\alpha - \mu)}}
+		\end{equation}
+		\begin{equation}
+		<N_\alpha> = \frac{1}{\beta}\frac{1}{\dot{Z}}\cdot \frac{\partial}{\partial \mu}(\dot{Z}) = 
+		\frac{1}{e^{-\beta (E_\alpha - \mu)} - 1} = f_{BE}
+		\end{equation}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{bose_einstein.png}
+			\caption{Rozkład Bose'go-Einsteina}
+		\end{figure}	
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{BEC_fermi.jpg}
+			\caption{Gęstość stanów: bozony a fermiony}
+		\end{figure}
+		\subparagraph{Kwantyzacja Borna-Karmana}
+		\begin{equation}
+		\begin{array}{cc}
+		\Psi(x=0) = \Psi(x+L_x) \\
+		\Psi(y = 0) = \Psi(y + L_y) \\
+		\Psi(z=0) = \Psi(z + L_z) \\
+		\hat{H} = \frac{\hat{o}^2}{2m} = -\frac{\hbar^2}{2m}\Delta
+		\end{array}
+		\end{equation}
 \end{document}
