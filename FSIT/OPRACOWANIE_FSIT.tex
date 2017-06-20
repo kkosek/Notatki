@@ -1105,4 +1105,114 @@
 		\hat{H} = \frac{\hat{o}^2}{2m} = -\frac{\hbar^2}{2m}\Delta
 		\end{array}
 		\end{equation}
+	\section{Wykład 11}
+		\begin{equation}
+			\hat{H}\Psi_{\vec{k}} = E_{\vec{k}}\Psi _{\vec{k}} \text{ i } 
+			\hat{H} = \frac{\hat{p}^2}{2m} = - \frac{\hbar^2}{2m}\Delta
+		\end{equation}
+		Powyżej: równianie na cząstkę posiadającą tylko energię kinetyczną.
+		\begin{equation}
+		\Psi _{\vec{k}}(\vec{r}) = \frac{1}{\sqrt{V}} e^{i\vec{k}\vec{r}}
+		\end{equation}
+		\begin{equation}
+		\Delta e^{\lceil i\vec{k}\vec{r} \rceil}  = -\vec{k}^2e^{\lceil i\vec{k}\vec{r} \rceil} 
+		\end{equation}
+		\begin{equation}
+			H_{\vec{k}}\Psi_{\vec{k}}(\vec{r}) = \frac{\hbar^2\vec{k}^2}{2m}\Psi_{\vec{k}}(\vec{r}) \Rightarrow
+			E_k = \frac{\hbar^2\vec{k}^2}{2m} \text{ gdzie } \vec{p} = \hbar \vec{k}
+		\end{equation}
+		Wykorzystując warunki Borna-Karmana:
+		\begin{equation}
+		e^{ik_xx} = e^{ik_x(x+L_x)}
+		\end{equation}
+		\begin{equation}
+		e^{ik_xL_x} = 1 \Rightarrow k_xL_x = 2n\pi
+		\end{equation}
+		\begin{equation}
+		k_x = \frac{2n\pi}{L_x}; k_y = \frac{2n\pi}{L_y}; k_z = \frac{2n\pi}{L_z}
+		\end{equation}
+		\begin{equation}
+			\vec{k} = 2\pi = \lceil \frac{n_x}{L_x};\frac{n_y}{L_y};\frac{n_z}{L_z}\rceil
+		\end{equation}
+		Jeden stan kwantowy przypada na objętość:
+		\begin{equation}
+			\Delta x \Delta y \Delta z = \frac{(2\pi)^3}{L_xL_yL_z} = \frac{(2\pi)^3}{V}
+		\end{equation}
+		\begin{equation}
+			s = 0, \frac{1}{2}, 1, \frac{3}{2} ...
+		\end{equation}
+		Powyżej (174): spin. Możliwe orientacje spinu: 2s + 1.
+		\paragraph{} Ile jest takich stanów kwantowych, gdzie
+		\begin{equation}
+			E < E_{\vec{k}} = \frac{\vec{k}\hbar^2}{2m}
+		\end{equation}
+		\begin{equation}
+		\Omega = \frac{\frac{4}{3}\pi |\vec{k}|^3}{\frac{(2\pi)^3}{V}}(2s + 1) = \frac{4}{3} \cdot \frac{V\pi}{(2\pi)^3}(2s + 1)\cdot (\frac{\sqrt{2mE_{\vec{k}}}}{\hbar})^3
+		\end{equation}
+		\begin{equation}
+		\Omega \sim E_k^{\frac{3}{2}}
+		\end{equation}
+		Gęstość stanów (178): 
+		\begin{equation}
+		P(E) = \frac{\partial \Omega}{\partial E} = AE^{\frac{1}{2}} 
+		\Rightarrow P(E) \sim E^{\frac{1}{2}}
+		\end{equation}
+		Gęstość stanów dla dowolnego wymiaru (179): 
+		\begin{equation}
+			P(E) = \frac{\partial \Omega}{\partial E} \sim 
+			\frac{\partial \lceil (E^{\frac{1}{2}})^D\rceil}{\partial E}
+		\end{equation}
+		\subsection{Termodynamika gazu elektronowego}
+		\begin{equation}
+			N = \int_{0}^{\infty}f_{FD}(\varepsilon)g(\varepsilon)d\varepsilon
+		\end{equation}
+		Powyżej: warunek inwentaryzacji. 
+		\subparagraph{Dla temperatury $ T > 0K $:}
+		\begin{equation}
+			N_0 = \int_{0}^{\mu} 1 \cdot A\sqrt{\varepsilon} d\varepsilon = \frac{2}{3} A\mu_0
+		\end{equation}
+		\begin{equation}
+			\mu_0 = (\frac{N}{A} \cdot \frac{3}{2})^{\frac{2}{3}} \sim C^{\frac{2}{3}}
+			\text{ gdzie } C = \frac{N}{V} \text{ to gęstość}
+		\end{equation}
+		Porównując metale i półprzewodniki:
+		\begin{equation}
+		C_{\text{met}} >> C_{\text{pół}} \text{ oraz } \mu_{\text{met}} >> \mu_{\text{pół}}
+		\text{ dla temperatury } T > 0K
+		\end{equation}
+		\begin{equation}
+			N = \int_{0}^{\infty}\frac{A\sqrt{\varepsilon}d\varepsilon}{e^{\lceil\beta(\varepsilon - \mu)+1\rceil}} =
+			V \cdot h(T, \mu)
+		\end{equation}
+		Tu było napisane \textbf{wyprowadzić} dla tego powyżej.
+		\begin{equation}
+		\mu(T) = \mu_0(1 - \frac{\pi^2}{12}(\frac{k_BT}{\mu_0})^2)
+		\end{equation}
+		Dla metali rozmycie jest małe - przypadek kwantowy, a dla półprzewodników rozmycie jest duże - rozkład Boltzmanna. Wzór $ \frac{k_BT}{\mu_0} $ określa rozmycie schodka.
+		\begin{equation}
+			U = <E> = \int_{0}^{\infty}f_{FD}(\varepsilon)g(\varepsilon)\varepsilon d\varepsilon
+		\end{equation}	
+		Powyżej: średnia energia.
+		\subparagraph{Dla temperatury $ T=OK $}
+		\begin{equation}
+		U_0 = \int_{0}^{\mu}A\sqrt{\varepsilon}\varepsilon d \varepsilon = 
+		\frac{2}{5} A\mu_0^{\frac{5}{2}} = 
+		\mu_0 A \mu_0^{\frac{3}{2}}\cdot \frac{2}{5} = 
+		\frac{3}{5} N\mu_0
+		\end{equation}	
+		\begin{equation}
+		\frac{3}{5}\mu_0 = \frac{N_0}{N}
+		\end{equation}
+		\begin{equation}
+		\mu = -\frac{\hbar^2k_F^2}{2m} \text{ gdzie } k_F \text{ to promień kuli Fermiego}
+		\end{equation}
+		Powierzchnia fermiego dla elektronów w krysztale nie jest sferą.
+	
+	
+	
+	
+	
+	
+	
 \end{document}
+
