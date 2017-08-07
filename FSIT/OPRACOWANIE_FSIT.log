@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.25)  20 JUN 2017 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.25)  7 AUG 2017 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -526,7 +526,36 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen121
 \l_MT_below_shortintertext_sep=\dimen122
 )
-(./OPRACOWANIE_FSIT.aux
+(/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks28
+\SOUL@lasttoken=\toks29
+\SOUL@cmds=\toks30
+\SOUL@buffer=\toks31
+\SOUL@token=\toks32
+\SOUL@spaceskip=\skip53
+\SOUL@ttwidth=\dimen123
+\SOUL@uldp=\dimen124
+\SOUL@ulht=\dimen125
+) (./OPRACOWANIE_FSIT.aux
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
 
 LaTeX Warning: Label `fig:fig1' multiply defined.
 
@@ -596,33 +625,33 @@ LaTeX Warning: Label `fig:fig1' multiply defined.
 )
 \openout1 = `OPRACOWANIE_FSIT.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count104
-\scratchdimen=\dimen123
+\scratchdimen=\dimen126
 \scratchbox=\box28
 \nofMPsegments=\count105
 \nofMParguments=\count106
-\everyMPshowfont=\toks28
+\everyMPshowfont=\toks33
 \MPscratchCnt=\count107
-\MPscratchDim=\dimen124
+\MPscratchDim=\dimen127
 \MPnumerator=\count108
 \makeMPintoPDFobject=\count109
-\everyMPtoPDFconversion=\toks29
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -671,70 +700,70 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OML+plm on input line 13.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 13.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 14.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 13.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 14.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 13.
+(Font)              <12> on input line 14.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 13.
+(Font)              <8> on input line 14.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 13.
-LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+(Font)              <6> on input line 14.
+LaTeX Font Info:    Try loading font information for U+msa on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 24.
+(Font)              <10> on input line 25.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 24.
+(Font)              <7> on input line 25.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 24.
+(Font)              <5> on input line 25.
  [1]
 <poziomyenergetyczne.jpeg, id=18, 298.86656pt x 278.54062pt>
 File: poziomyenergetyczne.jpeg Graphic file (type jpg)
 
 <use poziomyenergetyczne.jpeg>
-Package pdftex.def Info: poziomyenergetyczne.jpeg used on input line 60.
+Package pdftex.def Info: poziomyenergetyczne.jpeg used on input line 61.
 (pdftex.def)             Requested size: 119.5445pt x 111.41426pt.
 
 <entropiamieszania.jpeg, id=19, 700.86844pt x 453.94594pt>
 File: entropiamieszania.jpeg Graphic file (type jpg)
 
 <use entropiamieszania.jpeg>
-Package pdftex.def Info: entropiamieszania.jpeg used on input line 72.
+Package pdftex.def Info: entropiamieszania.jpeg used on input line 73.
 (pdftex.def)             Requested size: 420.5243pt x 272.36966pt.
 
-Overfull \hbox (75.5243pt too wide) in paragraph at lines 72--73
+Overfull \hbox (75.5243pt too wide) in paragraph at lines 73--74
  [][] 
  []
 
@@ -742,13 +771,13 @@ Overfull \hbox (75.5243pt too wide) in paragraph at lines 72--73
 File: chlodzeniemagnetyczne.jpeg Graphic file (type jpg)
 
 <use chlodzeniemagnetyczne.jpeg>
-Package pdftex.def Info: chlodzeniemagnetyczne.jpeg used on input line 80.
+Package pdftex.def Info: chlodzeniemagnetyczne.jpeg used on input line 81.
 (pdftex.def)             Requested size: 317.53876pt x 148.15462pt.
 
 <temperatury.jpeg, id=21, 502.12593pt x 203.25937pt>
 File: temperatury.jpeg Graphic file (type jpg)
  <use temperatury.jpeg>
-Package pdftex.def Info: temperatury.jpeg used on input line 87.
+Package pdftex.def Info: temperatury.jpeg used on input line 88.
 (pdftex.def)             Requested size: 301.27788pt x 121.95656pt.
 
 [2 <./poziomyenergetyczne.jpeg>]
@@ -756,10 +785,10 @@ Package pdftex.def Info: temperatury.jpeg used on input line 87.
 File: nieodwracalneprocesy.jpeg Graphic file (type jpg)
 
 <use nieodwracalneprocesy.jpeg>
-Package pdftex.def Info: nieodwracalneprocesy.jpeg used on input line 100.
+Package pdftex.def Info: nieodwracalneprocesy.jpeg used on input line 101.
 (pdftex.def)             Requested size: 304.43973pt x 266.04597pt.
  [3 <./entropiamieszania.jpeg>]
-Overfull \hbox (31.64578pt too wide) detected at line 118
+Overfull \hbox (31.64578pt too wide) detected at line 119
 \OML/plm/m/it/10 dF \OT4/cmr/m/n/10 = \OML/plm/m/it/10 d\OT4/cmr/m/n/10 (\OML/p
 lm/m/it/10 U \OMS/plsy/m/n/10 ^^@ \OML/plm/m/it/10 S[]\OT4/cmr/m/n/10 ) = \OML/
 plm/m/it/10 d\OT4/cmr/m/n/10 (\OML/plm/m/it/10 U \OMS/plsy/m/n/10 ^^@ \OML/plm/
@@ -775,10 +804,10 @@ esy.jpeg>] [6] [7] [8] <prawokirchoffa.jpeg, id=50, 360.59718pt x 344.03531pt>
 File: prawokirchoffa.jpeg Graphic file (type jpg)
 
 <use prawokirchoffa.jpeg>
-Package pdftex.def Info: prawokirchoffa.jpeg used on input line 242.
+Package pdftex.def Info: prawokirchoffa.jpeg used on input line 243.
 (pdftex.def)             Requested size: 216.35997pt x 206.42278pt.
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
+Underfull \hbox (badness 10000) in paragraph at lines 248--251
 
  []
 
@@ -786,10 +815,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--250
 File: stabilnoscukladow.jpeg Graphic file (type jpg)
 
 <use stabilnoscukladow.jpeg>
-Package pdftex.def Info: stabilnoscukladow.jpeg used on input line 255.
+Package pdftex.def Info: stabilnoscukladow.jpeg used on input line 256.
 (pdftex.def)             Requested size: 322.50735pt x 202.35756pt.
  [10 <./prawokirchoffa.jpeg>]
-Overfull \hbox (370.51526pt too wide) detected at line 279
+Overfull \hbox (370.51526pt too wide) detected at line 280
 \OML/plm/m/it/10 dS \OT4/cmr/m/n/10 = \OML/plm/m/it/10 dS[] \OT4/cmr/m/n/10 + \
 OML/plm/m/it/10 dS[] \OT4/cmr/m/n/10 = ([])\OML/plm/m/it/10 dU[] \OT4/cmr/m/n/1
 0 + []([])\OML/plm/m/it/10 dU[] \OT4/cmr/m/n/10 + []\OML/plm/m/it/10 dV[] \OT4/
@@ -805,11 +834,11 @@ cmr/m/n/10 + []([])(\OML/plm/m/it/10 dV[]\OT4/cmr/m/n/10 )[] + []([])\OML/plm/m
 File: energiaswobodnaczasteczki.jpeg Graphic file (type jpg)
 
 <use energiaswobodnaczasteczki.jpeg>
-Package pdftex.def Info: energiaswobodnaczasteczki.jpeg used on input line 430.
+Package pdftex.def Info: energiaswobodnaczasteczki.jpeg used on input line 431.
 
 (pdftex.def)             Requested size: 291.34068pt x 195.1305pt.
  [13]
-Overfull \hbox (58.80058pt too wide) detected at line 471
+Overfull \hbox (58.80058pt too wide) detected at line 472
 \OML/plm/m/it/10 dG \OT4/cmr/m/n/10 = \OML/plm/m/it/10 dG[] \OT4/cmr/m/n/10 + \
 OML/plm/m/it/10 dG[] \OT4/cmr/m/n/10 + \OML/plm/m/it/10 dG[] \OT4/cmr/m/n/10 = 
 \OML/plm/m/it/10 ^^V[]dN[] \OT4/cmr/m/n/10 + \OML/plm/m/it/10 ^^V[]dN[] \OT4/cm
@@ -823,10 +852,10 @@ T4/cmr/m/n/10 2\OML/plm/m/it/10 ^^V[] \OMS/plsy/m/n/10 ^^@ \OML/plm/m/it/10 ^^V
 <quasiczastki.jpeg, id=74, 485.56406pt x 325.215pt>
 File: quasiczastki.jpeg Graphic file (type jpg)
  <use quasiczastki.jpeg>
-Package pdftex.def Info: quasiczastki.jpeg used on input line 506.
+Package pdftex.def Info: quasiczastki.jpeg used on input line 507.
 (pdftex.def)             Requested size: 291.34068pt x 195.1305pt.
 
-Overfull \hbox (4.66745pt too wide) in paragraph at lines 501--509
+Overfull \hbox (4.66745pt too wide) in paragraph at lines 502--510
 \OT4/cmr/m/n/10 Przykªady quasi-cz¡stek: fo-ton, fo-non(kwant po-la spr¦-»y-sto
 -±ci), ma-gne-non(kwant
  []
@@ -836,49 +865,49 @@ Overfull \hbox (4.66745pt too wide) in paragraph at lines 501--509
 File: termodynamikaprzejsc.jpeg Graphic file (type jpg)
 
 <use termodynamikaprzejsc.jpeg>
-Package pdftex.def Info: termodynamikaprzejsc.jpeg used on input line 526.
+Package pdftex.def Info: termodynamikaprzejsc.jpeg used on input line 527.
 (pdftex.def)             Requested size: 291.34068pt x 195.1305pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--546
+Underfull \hbox (badness 10000) in paragraph at lines 543--547
 
  []
 
 [16 <./termodynamikaprzejsc.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 559--561
+Underfull \hbox (badness 10000) in paragraph at lines 560--562
 
  []
 
 
-LaTeX Warning: Command \l invalid in math mode on input line 569.
+LaTeX Warning: Command \l invalid in math mode on input line 570.
 
 Missing character: There is no ª in font plmi7!
 
-LaTeX Warning: Command \l invalid in math mode on input line 575.
+LaTeX Warning: Command \l invalid in math mode on input line 576.
 
 Missing character: There is no ª in font plmi7!
 <przejsciafazowe.jpeg, id=84, 913.91437pt x 509.65407pt>
 File: przejsciafazowe.jpeg Graphic file (type jpg)
 
 <use przejsciafazowe.jpeg>
-Package pdftex.def Info: przejsciafazowe.jpeg used on input line 587.
+Package pdftex.def Info: przejsciafazowe.jpeg used on input line 588.
 (pdftex.def)             Requested size: 411.25766pt x 229.34221pt.
 
-Overfull \hbox (66.25766pt too wide) in paragraph at lines 586--588
+Overfull \hbox (66.25766pt too wide) in paragraph at lines 587--589
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--595
+Underfull \hbox (badness 10000) in paragraph at lines 594--596
 
  []
 
 [17] <clausius.jpeg, id=88, 701.62125pt x 345.54094pt>
 File: clausius.jpeg Graphic file (type jpg)
  <use clausius.jpeg>
-Package pdftex.def Info: clausius.jpeg used on input line 607.
+Package pdftex.def Info: clausius.jpeg used on input line 608.
 (pdftex.def)             Requested size: 350.80975pt x 172.77003pt.
 
-Overfull \hbox (5.80975pt too wide) in paragraph at lines 607--608
+Overfull \hbox (5.80975pt too wide) in paragraph at lines 608--609
  [][] 
  []
 
@@ -886,20 +915,20 @@ Overfull \hbox (5.80975pt too wide) in paragraph at lines 607--608
 <statystyczna.jpeg, id=93, 596.2275pt x 294.34969pt>
 File: statystyczna.jpeg Graphic file (type jpg)
  <use statystyczna.jpeg>
-Package pdftex.def Info: statystyczna.jpeg used on input line 650.
+Package pdftex.def Info: statystyczna.jpeg used on input line 651.
 (pdftex.def)             Requested size: 298.11302pt x 147.17447pt.
 
 [19 <./clausius.jpeg>] <przestrzenfazowa.png, id=97, 385.1991pt x 208.8603pt>
 File: przestrzenfazowa.png Graphic file (type png)
 
 <use przestrzenfazowa.png>
-Package pdftex.def Info: przestrzenfazowa.png used on input line 683.
+Package pdftex.def Info: przestrzenfazowa.png used on input line 684.
 (pdftex.def)             Requested size: 192.59908pt x 104.42989pt.
  <oscylator.png, id=99, 242.40562pt x 97.11281pt>
 File: oscylator.png Graphic file (type png)
 
 <use oscylator.png>
-Package pdftex.def Info: oscylator.png used on input line 699.
+Package pdftex.def Info: oscylator.png used on input line 700.
 (pdftex.def)             Requested size: 121.2025pt x 48.55627pt.
  [20 <./statystyczna.jpeg>] [21 <./przestrzenfazowa.png> <./oscylator.png (PNG 
 copy)>]
@@ -907,13 +936,13 @@ copy)>]
 File: przestrzenoscylator.jpeg Graphic file (type jpg)
 
 <use przestrzenoscylator.jpeg>
-Package pdftex.def Info: przestrzenoscylator.jpeg used on input line 775.
+Package pdftex.def Info: przestrzenoscylator.jpeg used on input line 776.
 (pdftex.def)             Requested size: 287.95007pt x 153.94977pt.
 
 <kanoniczny.jpeg, id=108, 575.90157pt x 307.90031pt>
 File: kanoniczny.jpeg Graphic file (type jpg)
  <use kanoniczny.jpeg>
-Package pdftex.def Info: kanoniczny.jpeg used on input line 782.
+Package pdftex.def Info: kanoniczny.jpeg used on input line 783.
 (pdftex.def)             Requested size: 287.95007pt x 153.94977pt.
 
 [22 <./przestrzenoscylator.jpeg>] [23 <./kanoniczny.jpeg>]
@@ -921,22 +950,22 @@ Package pdftex.def Info: kanoniczny.jpeg used on input line 782.
 File: wielkikanoniczny.jpeg Graphic file (type jpg)
 
 <use wielkikanoniczny.jpeg>
-Package pdftex.def Info: wielkikanoniczny.jpeg used on input line 887.
+Package pdftex.def Info: wielkikanoniczny.jpeg used on input line 888.
 (pdftex.def)             Requested size: 287.95007pt x 153.94977pt.
  [24] [25 <./wielkikanoniczny.jpeg>] [26]
 <boltzmann.jpg, id=126, 357.335pt x 351.3125pt>
 File: boltzmann.jpg Graphic file (type jpg)
  <use boltzmann.jpg>
-Package pdftex.def Info: boltzmann.jpg used on input line 1025.
+Package pdftex.def Info: boltzmann.jpg used on input line 1026.
 (pdftex.def)             Requested size: 178.66705pt x 175.6558pt.
 
 <gazy_kwantowe.jpeg, id=127, 361.35pt x 307.90031pt>
 File: gazy_kwantowe.jpeg Graphic file (type jpg)
  <use gazy_kwantowe.jpeg>
-Package pdftex.def Info: gazy_kwantowe.jpeg used on input line 1033.
+Package pdftex.def Info: gazy_kwantowe.jpeg used on input line 1034.
 (pdftex.def)             Requested size: 180.67456pt x 153.94977pt.
 
-Overfull \hbox (20.43755pt too wide) in paragraph at lines 1036--1037
+Overfull \hbox (20.43755pt too wide) in paragraph at lines 1037--1038
  \OT4/cmr/bx/n/10 Fer-mio-ny,[] \OT4/cmr/m/n/10 czy-li cz¡st-ki o spi-nie po-ªó
 w-ko-wym pod-le-ga-j¡ roz-kªa-do-wi \OT4/cmr/bx/n/10 Fermiego-
  []
@@ -945,33 +974,78 @@ w-ko-wym pod-le-ga-j¡ roz-kªa-do-wi \OT4/cmr/bx/n/10 Fermiego-
 <fermi_dirac.jpg, id=134, 401.5pt x 281.05pt>
 File: fermi_dirac.jpg Graphic file (type jpg)
  <use fermi_dirac.jpg>
-Package pdftex.def Info: fermi_dirac.jpg used on input line 1067.
+Package pdftex.def Info: fermi_dirac.jpg used on input line 1068.
 (pdftex.def)             Requested size: 200.7495pt x 140.52464pt.
 
 <bose_einstein.png, id=135, 368.87813pt x 258.9675pt>
 File: bose_einstein.png Graphic file (type png)
  <use bose_einstein.png>
-Package pdftex.def Info: bose_einstein.png used on input line 1090.
+Package pdftex.def Info: bose_einstein.png used on input line 1091.
 (pdftex.def)             Requested size: 184.4386pt x 129.48341pt.
 
 <BEC_fermi.jpg, id=136, 501.875pt x 234.8775pt>
 File: BEC_fermi.jpg Graphic file (type jpg)
  <use BEC_fermi.jpg>
-Package pdftex.def Info: BEC_fermi.jpg used on input line 1096.
+Package pdftex.def Info: BEC_fermi.jpg used on input line 1097.
 (pdftex.def)             Requested size: 250.93687pt x 117.43846pt.
  [29 <./fermi_dirac.jpg>] [30 <./bose_einstein.png (PNG copy)> <./BEC_fermi.jpg
 >] [31]
-[32] (./OPRACOWANIE_FSIT.aux)
+<gaz_fermiego.jpeg, id=148, 409.53pt x 340.27126pt>
+File: gaz_fermiego.jpeg Graphic file (type jpg)
+ <use gaz_fermiego.jpeg>
+Package pdftex.def Info: gaz_fermiego.jpeg used on input line 1242.
+(pdftex.def)             Requested size: 204.7645pt x 170.13521pt.
+
+[32] <cieplo_wlasciwe_gaz_fermiego.jpeg, id=152, 785.18344pt x 347.79938pt>
+File: cieplo_wlasciwe_gaz_fermiego.jpeg Graphic file (type jpg)
+
+<use cieplo_wlasciwe_gaz_fermiego.jpeg>
+Package pdftex.def Info: cieplo_wlasciwe_gaz_fermiego.jpeg used on input line 1
+255.
+(pdftex.def)             Requested size: 392.59076pt x 173.89926pt.
+
+Overfull \hbox (47.59076pt too wide) in paragraph at lines 1255--1256
+ [][] 
+ []
+
+[33 <./gaz_fermiego.jpeg> <./cieplo_wlasciwe_gaz_fermiego.jpeg>]
+<condense.jpg, id=156, 576.65437pt x 188.95593pt>
+File: condense.jpg Graphic file (type jpg)
+ <use condense.jpg>
+Package pdftex.def Info: condense.jpg used on input line 1300.
+(pdftex.def)             Requested size: 288.32648pt x 94.47772pt.
+ [34 <./condense.jpg>] <gaz_sieciowy.jpeg, id=160, 420.82219pt x 496.10344pt>
+File: gaz_sieciowy.jpeg Graphic file (type jpg)
+
+<use gaz_sieciowy.jpeg>
+Package pdftex.def Info: gaz_sieciowy.jpeg used on input line 1356.
+(pdftex.def)             Requested size: 210.41057pt x 248.0511pt.
+
+<gaz_dwuskladnikowy.jpeg, id=161, 579.66562pt x 323.70938pt>
+File: gaz_dwuskladnikowy.jpeg Graphic file (type jpg)
+
+<use gaz_dwuskladnikowy.jpeg>
+Package pdftex.def Info: gaz_dwuskladnikowy.jpeg used on input line 1362.
+(pdftex.def)             Requested size: 289.83209pt x 161.8543pt.
+
+<lancuch_isinga.jpeg, id=162, 579.66562pt x 323.70938pt>
+File: lancuch_isinga.jpeg Graphic file (type jpg)
+
+<use lancuch_isinga.jpeg>
+Package pdftex.def Info: lancuch_isinga.jpeg used on input line 1368.
+(pdftex.def)             Requested size: 289.83209pt x 161.8543pt.
+ [35] [36 <./gaz_sieciowy.jpeg>] [37 <./gaz_dwuskladnikowy.jpeg>] [38 <./lancuc
+h_isinga.jpeg>] (./OPRACOWANIE_FSIT.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3662 strings out of 493029
- 50186 string characters out of 6136234
- 116622 words of memory out of 5000000
- 7083 multiletter control sequences out of 15000+600000
- 17314 words of font info for 53 fonts, out of 8000000 for 9000
+ 3863 strings out of 493029
+ 53005 string characters out of 6136234
+ 120105 words of memory out of 5000000
+ 7273 multiletter control sequences out of 15000+600000
+ 17627 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,13n,26p,462b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/share/texliv
@@ -995,10 +1069,10 @@ c/pl/plr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy5.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/pl/plsy7.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/pl/plti10.pfb>
-Output written on OPRACOWANIE_FSIT.pdf (33 pages, 896756 bytes).
+Output written on OPRACOWANIE_FSIT.pdf (39 pages, 1162172 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 245 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

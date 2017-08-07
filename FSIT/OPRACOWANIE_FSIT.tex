@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx} 
 \usepackage{mathtools}
+\usepackage{soul}
 \title{Fizyka Statystyczna i Termodynamika \\ Opracowanie zagadnień do egzaminu}
 \author{Katarzyna Kosek \\ Patryk Bojarski}
 
@@ -21,7 +22,7 @@
 				\item \textit{Fizyka statystyczna} A. Zagórski
 				\item \textit{Wykłady z mechaniki statystycznej} R. Feynmann
 			\end{itemize}
-		\paragraph{Wielkości ekstensywne:} są proporcjonalne do wielkości układu: $S(u) = S(u_1) + S(u_2)$. Przykłady: masa, energia, pęd, moment pędu, liczba cząstek
+		\paragraph{Wielkości ekstensywne:} są proporcjonalne do wielkości układu: $S(u) = S(u_1) + S(u_2)$. Przykłady: masa, energia, pęd, moment pędu, lic zba cząstek
 		\paragraph{Wielkości intensywne:} są niezależne od wielkości układu, przykłady: prędkość, gęstość, przyśpieszenie, potencjał chemiczny, temperatura
 		\paragraph{Zmienne: }
 			\begin{itemize}
@@ -1207,12 +1208,250 @@
 		\mu = -\frac{\hbar^2k_F^2}{2m} \text{ gdzie } k_F \text{ to promień kuli Fermiego}
 		\end{equation}
 		Powierzchnia fermiego dla elektronów w krysztale nie jest sferą.
-	
-	
-	
-	
-	
-	
-	
+	\section{Wykład 12}
+		\paragraph{Temperatura fermiego}
+		\begin{equation}
+			k_BT_F = E_F = \mu_0(T) 
+		\end{equation}
+		\begin{equation}
+		\frac{k_BT}{\mu} << 1
+		\end{equation}
+		Wzór (191) - silne efekty kwantowe	
+		\begin{equation}
+		\frac{k_BT}{k_BT_F} = \frac{T}{T_F}
+		\end{equation}
+		\paragraph{Ciepło właściwe gazu fermiego}
+		\begin{equation}
+		U = \int_{0}^{\infty}\varepsilon f_{FD}g(\varepsilon)d \varepsilon
+		\end{equation}
+		Powyżej: warunek inwetaryzacji. $ \mu(T) $ maleje wraz ze wzrostem temperatury.
+		\begin{equation}
+		\mu(T) = \mu_0 \lceil 1 - \frac{\pi^2}{12}(\frac{k_BT}{\mu_0})^2 \rceil = 
+		 \mu_0 \lceil 1 - \frac{\pi^2}{12}(\frac{T}{T_F})^2 \rceil
+		\end{equation}
+		\begin{equation}
+		U_0 = \frac{3}{5}N\mu_0
+		\end{equation}
+		\begin{equation}
+		U(T) \cong U_0 \lceil 1 + \frac{5\pi^2}{12}(\frac{T}{T_F})^2 \rceil		 
+		\text{ dla } T < T_F
+		\end{equation}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{gaz_fermiego.jpeg}
+			\caption{Temperatura Fermiego, $ U(T) = \frac{3}{2}Nk_BT $}
+		\end{figure}
+		\begin{equation}
+		C_V = \bigg( \frac{\partial U}{\partial T} \bigg)_V = 
+		\begin{cases}
+			aT \text{ , } \frac{T}{T_F} << 1 \\
+			\frac{3}{2}Nk_B \text{ , } \frac{T}{T_F} >> 1
+		\end{cases}
+		\end{equation}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{cieplo_wlasciwe_gaz_fermiego.jpeg}
+			\caption{Ciepło właściwe dla gazu fermiego}
+		\end{figure}
+		\begin{equation}
+		\begin{array}{cc}
+		pV = 
+		k_Bln(z) = 
+		k_BTln(z_1 \cdot z_2 \cdot ... z_N) = \\ \\ 
+		k_BT\int_{0}^{\infty}g(\varepsilon)ln \lceil z(\varepsilon) \rceil d \varepsilon = 
+		k_BT\int_{0}^{\infty} A \sqrt{\varepsilon} \cdot ln \lceil 1 + e^{-\beta(\varepsilon - \mu)} \rceil d \varepsilon = \\ \\
+		-k_B T \int_{0}^{\infty} A \cdot \frac{2}{3} \varepsilon^{\frac{3}{2}} \cdot 
+		\frac{- \beta e^{-\beta(\varepsilon - \mu)}}{1 + e^{-\beta(\varepsilon - \mu)}} d\varepsilon
+		\Rightarrow pV = \frac{2}{3}U(T)
+		\end{array}
+		\end{equation}
+		\paragraph{Termiczna długość fali de Broglie'a}
+		\begin{equation}
+		E_k = \frac{\vec{p}^2}{2m} = \frac{\hbar^2 \vec{k}^2}{2m} = \Bigg \|  |\vec{k}| = \frac{2 \pi}{\lambda} \Bigg \| = \frac{\hbar^2 \cdot (2\pi)^2}{2m \cdot \lambda^2} = \frac{h^2}{2m\lambda^2}
+		\end{equation}
+		Z poprzednich rozważań wynika:
+		\begin{equation}
+		E_k = \frac{3}{2}k_BT
+		\end{equation}
+		\begin{equation}
+		\lambda \cong h\sqrt{\frac{1}{3mk_BT}}
+		\end{equation}
+		Natomiast tak wygląda oznaczenie historyczne:
+		\begin{equation}
+		\lambda_T = \sqrt{\frac{2\pi \hbar^2}{mk_BT}}
+		\end{equation}
+		Objętość jednej cząstki: 
+		\begin{equation}
+		a^3 = \frac{V}{N} = \frac{1}{C}
+		\end{equation}
+		\begin{equation}
+		(\lambda_T)^3 \simeq \frac{1}{C}
+		\end{equation}
+		Powyżej: warunek na kwantowość.
+		\begin{equation}
+		\Bigg( \frac{2 \pi \hbar^2}{m k_B T_F} \Bigg)^{\frac{3}{2}} = \frac{1}{C}
+		\end{equation}
+		\paragraph{Kondensacja Bosego-Einsteina}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{condense.jpg}
+			\caption{Kondensat Bosego - Einsteina}
+		\end{figure}
+		\begin{equation}
+			N = \int_{0}^{\infty}f_{BE}(\varepsilon)g(\varepsilon) d \varepsilon = 
+			\int_{0}^{\infty} \frac{B\sqrt{\varepsilon} d \varepsilon}{e^{\beta (\varepsilon - \mu)} - 1}
+		\end{equation}
+		Szukamy warunku na $ \mu(T) = 0 $ :
+		\begin{equation}
+		\begin{gathered}
+			N = 	\int_{0}^{\infty} \frac{B\sqrt{\varepsilon} d \varepsilon}{e^{\beta (\varepsilon - \mu)} - 1} = 
+			\Bigg\| 
+			\begin{array}{cc}
+			\beta \varepsilon = x 
+			\varepsilon = k_BT_x
+			\end{array} \Rightarrow 
+			d\varepsilon = k_BTdx 
+			\Bigg\|	= \\
+			B(k_BT_C)^{\frac{3}{2}}\int_{0}^{\infty}\frac{\sqrt{x}}{e^x - 1}dx
+		\end{gathered}
+		\end{equation}
+		Całka w powyższym wyrażeniu jest pewną stałą.
+		\begin{equation}
+			T_C^{\frac{3}{2}} \sim \frac{N}{C} = C \text{ i gdy } T > T_C \Rightarrow
+			\mu < 0 \text{ oraz } T < T_C \implies \mu = 0
+ 		\end{equation}
+		\begin{equation}
+			U = N_0 \cdot 0 + (N - N_0) \int_{0}^{\infty} \varepsilon g(\varepsilon) 
+			\frac{f \varepsilon}{E^{\beta (\varepsilon - 0)} - 1} \sim (N - N_0)T^{\frac{5}{2}}
+		\end{equation}
+	\section{Ćwiczenie 13 - tak było w notatkach zmiast 13 wykładu}
+		\paragraph{} Model Isinga oddziałujących ze sobą cząstek
+		\begin{equation}
+		E_{nm} = -J_{nm}S_nS_m
+		\end{equation}
+		gdzie $ J_{nm} $ jest całką wymiany 
+		\begin{equation}
+		J_{nm} = J(n,m)
+		\end{equation}
+		Powyżej: oddziaływanie tylko między najbliższymi sąsiadami
+		\begin{equation}
+			J > 0 \Rightarrow E_{nm} = 
+			\begin{cases}
+				-J < 0 \text{, dla } S_n = S_m \\
+				J > 0 \text{, dla } S_n \neq S_m
+			\end{cases}
+		\end{equation}
+		\begin{equation}
+			F = U - TS \text{ i } U = \sum_{n,m}^{} U_{nm}
+		\end{equation}
+		$ U_{min} $ dla $ S_n = S_m $ - układ ferromagnetyczny \\
+		$ J < 0  $ w temperaturze $ 0K \Rightarrow S_n \neq S_m$ - układ antyferromagnetyczny
+		\paragraph{Przykłady}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{gaz_sieciowy.jpeg}
+			\caption{Gaz sieciowy}
+		\end{figure}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{gaz_dwuskladnikowy.jpeg}
+			\caption{Gaz dwuskładnikowy}
+		\end{figure}
+		\begin{figure}[ht]
+			\label{fig:fig1}
+			\centering
+			\includegraphics[scale=0.5]{lancuch_isinga.jpeg}
+			\caption{Łańcuch Isinga}
+		\end{figure}
+		\begin{equation}
+			E = \sum_{n=1}^{N-1}J_nS_nS_{n+1}
+		\end{equation}
+		\begin{equation}
+		K_n = \frac{J_n}{k_BT} = \beta J_n
+		\end{equation}
+		\begin{equation}
+			z_n = \sum_{s_i}^{}exp\lceil K_1S_1S_2 + ... + K_{N-1}S_{N-1}S_N \rceil
+		\end{equation}
+		\begin{equation}
+			\begin{array}{cc}
+			\sum_{S_N = 1}^{} e^{K_NS_{N-1}S_N} + e^{-K_{N-1}S_{N-1}} = 2cosh(K_{N-1}S_{N-1}) = \\
+			= 2cosh(K_{N-1})
+			\end{array}			
+		\end{equation}
+		\begin{equation}
+		z_n = z_{N-1}2cosh(K_{N-1})
+		\end{equation}
+		\begin{equation}
+			z_N = z_1 \cdot 2^{N-1} \prod_{n=1}^{N-1}cosh(K_N) = 2^N \prod_{n=1}^{N-1}cosh(K_n), 
+			\text{, bo } z_1 = 2
+		\end{equation}
+		Zakładamy że $ K_n = K_m $:
+		\begin{equation}
+			Z_N = 2^Ncosh^{N-1}(K)
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+			U = <E> = -\frac{\partial}{\partial \beta} ln(z) = -\frac{\partial}{\partial \beta}
+			\lceil Nln(2) + (N-1)ln(cosh(K))\rceil = \\ \\
+			= (1 - N)Jtgh(\beta J)
+		\end{array}		
+		\end{equation}
+		Przy warunku $ K_n \neq K_M $:
+		\begin{equation}
+		\begin{rcases}
+			U = \langle E \rangle = - \sum_{n-1}^{N-1} J_N tgh(\beta J_n) \\
+			U = \langle E \rangle = \langle - \sum_{n=1}^{N-1} J_n S_n S_{n+1}\rangle
+		\end{rcases} \Rightarrow \langle S_nS_{n+1} = tgh(\beta J_n)\rangle
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+			C_v = \bigg( \frac{\partial U}{\partial T} \bigg)_V = k_B(N-1)(\beta J)^2cosh^{-2}(\beta J)
+			\\
+			x = \beta J
+			\\
+			C_v(x) = k_B(N-1)x^2cosh^{-2}(x)
+		\end{array}
+		\end{equation}
+		\begin{equation}
+		S = -\frac{\partial F}{\partial T} \text{ i }F = -k_BTln(z_N)
+		\end{equation}
+		\begin{equation}
+			F = -k_BTln \lceil Nln(2) + (N-1)ln(cosh(\beta J)) \rceil
+		\end{equation}
+		\begin{equation}
+		\begin{array}{cc}
+			S = -\frac{F}{T} + k_BT(N-1)tgh(\beta J)\cdot J \cdot \frac{-1}{k_BT^2} = \\ \\
+			 = k_BNln(2) + k_B(N-1)\lceil ln(cosh(\beta J)) - \beta J tgh(\beta J) \rceil
+		\end{array}
+		\end{equation}
+		\begin{equation}
+			s \xrightarrow{T \rightarrow 0K} k_Bln(2)	
+		\end{equation}
+		\begin{equation}
+			s \xrightarrow{T \rightarrow \infty} Nk_Bln(2)	
+		\end{equation}
+		\begin{equation}
+			\Gamma(n) = \langle S_iS_{i+n} \rangle \langle S_i \rangle \langle S_{i+n} \rangle 
+		\end{equation}
+		Powyżej: \textbf{funkcja korelacyjna}
+		\begin{equation}
+			\langle S_iS_{i+n}\rangle = \frac
+			{\Sigma S_iS_{i+n} \Bigg( \sum_{n=1}^{N-1}K_nS_nS_{n+1}\Bigg)}
+			{Z}
+		\end{equation}
+		\begin{equation}
+		S_iS_{i+n} = S_nS_{n+1}\cdot S_{n+1}S_{n+2} \cdot ... \cdot S_{n-1}S_n
+		\end{equation}
+		\begin{equation}
+			S_iS_{i+n}e^{K_iS_iS_{i+n}} = \frac{\partial}{\partial K_i}\bigg( e^{K_iS_iS_{i+n}} \bigg)
+		\end{equation}
+		\begin{equation}
+		\langle S_i S_{i + n}
+		\end{equation}
 \end{document}
 
